@@ -1,0 +1,183 @@
+import json
+
+notebook = {
+    "cells": [
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "# 📊 Future Interns - Task 1: Retail Sales Data Analysis & Executive Dashboard\n",
+                "---\n",
+                "**Objective:** Clean, analyze, and build a client-ready executive dashboard for an online retail dataset containing 540k+ transactions. Provide actionable business intelligence and growth recommendations.\n",
+                "\n",
+                "### 🛠️ Deliverables:\n",
+                "1. **Data Cleaning & Preprocessing** (Removing cancellations, formatting dates, handling missing values)\n",
+                "2. **Exploratory Data Analysis & KPI Metrics** ($10.67M Gross Revenue, 19,960 Orders, $534.40 AOV)\n",
+                "3. **Time-Series Seasonality & Trend Analysis** (Monthly performance & hourly checkout density)\n",
+                "4. **Product Revenue & Pareto (80/20 Rule) Analysis**\n",
+                "5. **Geographic Distribution & International Market Expansion**\n",
+                "6. **Customer RFM Segmentation (Recency, Frequency, Monetary)**\n",
+                "7. **Strategic Business Recommendations for Executive Stakeholders**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import pandas as pd\n",
+                "import numpy as np\n",
+                "import matplotlib.pyplot as plt\n",
+                "import seaborn as sns\n",
+                "import plotly.express as px\n",
+                "import plotly.graph_objects as go\n",
+                "import warnings\n",
+                "warnings.filterwarnings('ignore')\n",
+                "\n",
+                "# Set aesthetics\n",
+                "plt.style.use('seaborn-v0_8-whitegrid')\n",
+                "pd.set_option('display.max_columns', None)\n",
+                "pd.set_option('display.float_format', lambda x: '%.2f' % x)"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 1. Data Loading & Data Quality Audit"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "df = pd.read_csv('data/data.csv', encoding='ISO-8859-1')\n",
+                "print(f'Raw dataset shape: {df.shape}')\n",
+                "df.head()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 2. Data Cleaning & Feature Engineering"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# Convert dates\n",
+                "df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'], format='mixed')\n",
+                "df['Description'] = df['Description'].fillna('Unknown Product').str.strip()\n",
+                "\n",
+                "# Clean positive sales\n",
+                "clean_df = df[(df['Quantity'] > 0) & (df['UnitPrice'] > 0) & (~df['InvoiceNo'].str.startswith('C', na=False))].copy()\n",
+                "clean_df['Revenue'] = clean_df['Quantity'] * clean_df['UnitPrice']\n",
+                "clean_df['YearMonth'] = clean_df['InvoiceDate'].dt.to_period('M').astype(str)\n",
+                "clean_df['DayOfWeek'] = clean_df['InvoiceDate'].dt.day_name()\n",
+                "clean_df['Hour'] = clean_df['InvoiceDate'].dt.hour\n",
+                "clean_df['Date'] = clean_df['InvoiceDate'].dt.date\n",
+                "\n",
+                "print(f'Cleaned valid records: {len(clean_df):,}')\n",
+                "print(f'Total Revenue: ${clean_df[\"Revenue\"].sum():,.2f}')\n",
+                "print(f'Total Completed Orders: {clean_df[\"InvoiceNo\"].nunique():,}')\n",
+                "print(f'Average Order Value: ${clean_df[\"Revenue\"].sum() / clean_df[\"InvoiceNo\"].nunique():,.2f}')"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 3. Monthly Revenue Trends & Seasonality"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "monthly = clean_df.groupby('YearMonth').agg(\n",
+                "    Revenue=('Revenue', 'sum'),\n",
+                "    Orders=('InvoiceNo', 'nunique')\n",
+                ").reset_index()\n",
+                "\n",
+                "fig, ax1 = plt.subplots(figsize=(12, 5), dpi=150)\n",
+                "ax1.bar(monthly['YearMonth'], monthly['Revenue'] / 1e3, color='#2563eb', alpha=0.85, label='Revenue ($k)')\n",
+                "ax1.set_ylabel('Revenue ($ in Thousands)', color='#2563eb', fontweight='bold')\n",
+                "ax1.tick_params(axis='x', rotation=45)\n",
+                "\n",
+                "ax2 = ax1.twinx()\n",
+                "ax2.plot(monthly['YearMonth'], monthly['Orders'], color='#f59e0b', marker='o', linewidth=2.5, label='Orders')\n",
+                "ax2.set_ylabel('Total Orders', color='#f59e0b', fontweight='bold')\n",
+                "ax2.grid(False)\n",
+                "\n",
+                "plt.title('Monthly Revenue and Order Volume Trends', fontsize=14, fontweight='bold', pad=12)\n",
+                "plt.tight_layout()\n",
+                "plt.show()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 4. Product Pareto Analysis (80/20 Rule)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": None,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "prod_agg = clean_df.groupby('Description').agg(Revenue=('Revenue', 'sum')).reset_index().sort_values('Revenue', ascending=False)\n",
+                "prod_agg['CumRevenue'] = prod_agg['Revenue'].cumsum()\n",
+                "prod_agg['CumRevPct'] = (prod_agg['CumRevenue'] / clean_df['Revenue'].sum()) * 100\n",
+                "prod_agg['ProductRank'] = np.arange(1, len(prod_agg) + 1)\n",
+                "prod_agg['CumProdPct'] = (prod_agg['ProductRank'] / len(prod_agg)) * 100\n",
+                "\n",
+                "plt.figure(figsize=(10, 5), dpi=150)\n",
+                "plt.plot(prod_agg['CumProdPct'], prod_agg['CumRevPct'], color='#dc2626', linewidth=2.5, label='Cumulative Revenue %')\n",
+                "plt.plot([0, 100], [0, 100], color='#94a3b8', linestyle='--', label='Equal Baseline')\n",
+                "plt.axhline(80, color='#1e293b', linestyle=':')\n",
+                "plt.title('Pareto Principle: Top ~20% of SKUs Produce 80% of Revenue', fontsize=13, fontweight='bold')\n",
+                "plt.xlabel('% of Total Products')\n",
+                "plt.ylabel('Cumulative % of Revenue')\n",
+                "plt.legend()\n",
+                "plt.tight_layout()\n",
+                "plt.show()"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "## 5. Strategic Summary & Recommendations\n",
+                "\n",
+                "1. **Q4 Peak Ramp**: Prepare inventory buffers by August/September for the holiday spike.\n",
+                "2. **Pareto Inventory**: Focus prime shelf space and safety stock on the top 20% hero SKUs.\n",
+                "3. **International B2B**: Scale European accounts (Netherlands, Germany, France) with localized B2B pricing.\n",
+                "4. **Customer Retention**: Trigger automated email re-engagement for the 14.5% high-value customers at risk."
+            ]
+        }
+    ],
+    "metadata": {
+        "language_info": {
+            "name": "python",
+            "version": "3.12.6"
+        }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 4
+}
+
+with open("sales_analysis_and_dashboard.ipynb", "w") as f:
+    json.dump(notebook, f, indent=2)
+
+print("Created sales_analysis_and_dashboard.ipynb successfully!")

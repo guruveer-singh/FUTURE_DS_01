@@ -1,0 +1,59 @@
+🔍 About the Task
+In this real-world internship task, you will work with business sales data to perform the kind of analysis that data analysts do for real companies, startups, and agencies.
+
+Your goal is not just to create charts, but to help a business answer important questions such as:
+
+Which products generate the most revenue?
+How do sales change over time?
+Which categories or regions are most profitable?
+Where should the business focus to grow faster?
+This task is designed so that even beginners can start, while still being valuable in real job and freelance scenarios.
+
+You do not need advanced coding skills.
+You need curiosity, logical thinking, and willingness to learn analytics tools
+
+✅ What You’ll Do
+During this task, you will:
+
+Clean and organize raw sales data (Excel or CSV format)
+Analyze:
+Revenue trends over time
+Top-selling products
+High-value categories or regions
+Build a professional, client-ready dashboard or analysis report
+Write clear insights and recommendations as if you are advising a real business
+🎯 Skills You’ll Gain
+By completing this task, you will build practical skills such as:
+
+Data cleaning & preparation
+Business-focused KPI analysis
+Trend and performance analysis
+Insight generation and reporting
+Business storytelling using data
+These are core skills required in analytics jobs and freelance projects.📤 
+
+most imp***
+Final Deliverable
+You must submit:
+
+A client-ready dashboard or analysis report
+Clear business insights and actionable recommendations
+Your work documented properly (GitHub / dashboard link)
+Your submission should look like something you would confidently show to:
+
+A business owner
+A startup founder
+An analytics client
+📢 Showcase Your Work
+Once you complete this task:
+
+Upload your project to a public GitHub repository with proper documentation (README, files, dashboard links).
+Share a professional post on LinkedIn highlighting:
+What problem you worked on
+Key insights or outcomes
+Tools used and learnings
+Please tag and follow Future Interns on LinkedIn so your work can be recognized and shared:
+
+👉 https://www.linkedin.com/company/future-interns/
+
+Sharing your work publicly helps build a verifiable portfolio, increases professional visibility, and reflects real-world industry practice.

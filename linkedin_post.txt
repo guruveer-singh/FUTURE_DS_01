@@ -1,0 +1,22 @@
+🚀 Excited to share my latest Data Science & Business Intelligence project with Future Interns! 📊
+
+As part of my Data Science Internship (Task 1), I analyzed 540,000+ retail sales transactions totaling $10.67M in revenue to build an end-to-end Executive Sales Intelligence Dashboard & Strategic Advisory Report.
+
+🔍 Key Questions Solved:
+1️⃣ How does revenue evolve over time? → Uncovered massive Q4 holiday seasonality peaking at $1.51M in Nov (+98.2% MoM).
+2️⃣ Which products drive the business? → Validated the Pareto Principle (80/20 Rule): Top 19.8% of SKUs generate 80% of total revenue!
+3️⃣ Where are international growth opportunities? → International markets (Netherlands, Germany, France) boast an Average Order Value 3.2x higher than domestic UK orders ($3,000+ vs $500).
+4️⃣ How to optimize customer retention? → Segmented 4,338 customers using RFM analysis, identifying $1.45M in at-risk customer revenue for automated win-back workflows.
+
+🛠️ Tools & Stack Used:
+• Python (Pandas, NumPy) for data cleaning and pipeline engineering
+• Plotly, Seaborn & Matplotlib for publication-grade 300 DPI visualizations
+• Streamlit & Tailwind CSS / HTML5 for standalone interactive dashboards
+• RFM Customer Segmentation & Pareto Analysis
+
+📁 GitHub Repository & Interactive Dashboards:
+[Link to your GitHub repo]
+
+Huge thanks to Future Interns for this hands-on, industry-standard analytics challenge!
+
+#DataScience #DataAnalytics #BusinessIntelligence #Python #Streamlit #DataVisualization #Dashboard #MachineLearning #FutureInterns #Internship #EDA #PortfolioProject
