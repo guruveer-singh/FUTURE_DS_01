@@ -1,14 +1,14 @@
 # 💼 Future Interns - Data Science & Analytics Portfolio
 
-[![Excel](https://img.shields.io/badge/Excel-Dashboard_Ready-217346.svg?logo=microsoft-excel&logoColor=white)](Customer_Retention_Dashboard.xlsx)
+[![Excel](https://img.shields.io/badge/Excel-Dashboard_Ready-217346.svg?logo=microsoft-excel&logoColor=white)](Marketing_Funnel_Dashboard.xlsx)
 [![PowerBI](https://img.shields.io/badge/Power_BI-PBIX_Model-F2C811.svg?logo=power-bi&logoColor=black)](FUTURE_DS_01.pbix)
-[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](customer_retention_and_churn_analysis.ipynb)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626.svg?logo=jupyter&logoColor=white)](customer_retention_and_churn_analysis.ipynb)
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](marketing_funnel_and_conversion_analysis.ipynb)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626.svg?logo=jupyter&logoColor=white)](marketing_funnel_and_conversion_analysis.ipynb)
 [![Status](https://img.shields.io/badge/Status-Client--Ready_Production-success.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
 > **Future Interns Data Science & Analytics Program (2026)**  
-> Production-grade data analytics, executive dashboard engineering, cohort retention modeling, and strategic business intelligence portfolio.
+> Production-grade data analytics, executive dashboard engineering, conversion rate optimization, and strategic business intelligence portfolio.
 
 ---
 
@@ -16,8 +16,69 @@
 
 | Project | Domain | Core Tools | Primary Deliverable | Status |
 |---|---|---|---|---|
+| **[Task 3: Marketing Funnel & Conversion Performance](#-task-3-marketing-funnel--conversion-performance-analysis)** | Growth & Marketing Analytics | Excel, Python, Pandas, Matplotlib | [Excel Dashboard](Marketing_Funnel_Dashboard.xlsx) \| [Report](funnel_analysis_report.md) \| [Notebook](marketing_funnel_and_conversion_analysis.ipynb) | ✅ **Complete** |
 | **[Task 2: Customer Retention & Churn Analysis](#-task-2-customer-retention--churn-analysis)** | Subscription & SaaS Analytics | Excel, Python, Pandas, Matplotlib | [Excel Dashboard](Customer_Retention_Dashboard.xlsx) \| [Report](retention_analysis_report.md) \| [Notebook](customer_retention_and_churn_analysis.ipynb) | ✅ **Complete** |
 | **[Task 1: Retail Sales Analysis & Executive Dashboard](#-task-1-retail-sales-data-analysis--executive-dashboard)** | E-Commerce & Retail BI | Excel, Power BI, Python, RFM | [Excel Dashboard](Retail_Sales_Dashboard.xlsx) \| [PBIX Model](FUTURE_DS_01.pbix) \| [Report](analysis_report.md) | ✅ **Complete** |
+
+---
+
+# 🚀 Task 3: Marketing Funnel & Conversion Performance Analysis
+
+> **Executive Business Objective:**  
+> In digital marketing, SaaS, and high-growth startups, driving top-of-funnel traffic is meaningless if leads fail to convert into paying customers. This task evaluates **244,178 inbound website sessions**, **15,000 captured leads**, and **1,819 closed won customers** ($10.87M in pipeline revenue) to diagnose conversion bottlenecks, evaluate multi-channel unit economics (CAC / ROAS), and formulate high-ROI growth interventions.
+
+### 📑 Task 3 Core Deliverables
+- **[Marketing_Funnel_Dashboard.xlsx](Marketing_Funnel_Dashboard.xlsx)**: 4-tab client-ready Excel dashboard featuring symmetrical KPI cards, native Excel charts, full funnel stage progression tables, campaign ROI breakdowns, and 5,000 lead records with autofilters.
+- **[funnel_analysis_report.md](funnel_analysis_report.md)**: Comprehensive executive advisory report detailing stage drop-offs, channel attribution, unit economics (CAC / ROAS), and a 30-60-90 day optimization roadmap.
+- **[marketing_funnel_and_conversion_analysis.ipynb](marketing_funnel_and_conversion_analysis.ipynb)**: Reproducible Python notebook natively executed via `nbconvert` with verified execution counts, outputs, and embedded plots.
+- **[TASK3_README.md](TASK3_README.md)**: Dedicated stand-alone documentation for Task 3.
+- **[task3_linkedin_post.txt](task3_linkedin_post.txt)**: Pre-formatted professional LinkedIn showcase post.
+- **[visualizations/funnel/](visualizations/funnel/)**: 7 high-resolution (300 DPI) publication-ready charts.
+
+### 🎯 Task 3 Executive KPI Scorecard
+- **Total Inbound Traffic:** **244,178 Visitors** (100% baseline traffic)
+- **Captured Leads:** **15,000 Leads** (**6.14% Traffic-to-Lead conversion rate**)
+- **Marketing Qualified Leads (MQL):** **10,533 MQLs** (70.22% Lead-to-MQL rate)
+- **Sales Qualified Leads (SQL):** **5,388 SQLs** (**51.15% MQL-to-SQL rate** - *The Mid-Funnel Leak*)
+- **Closed Won Customers:** **1,819 Customers** (**12.13% Lead-to-Customer conversion**; 0.74% overall visitor-to-customer)
+- **Total Marketing Spend:** **$643,724.00** across 6 acquisition channels
+- **Pipeline Revenue Generated:** **$10,868,627.35** (Average deal size: **$5,975.06**)
+- **Blended Customer CAC:** **$353.89** (Referral: $78.61 vs. Paid Search: $635.72)
+- **Portfolio Blended ROAS:** **16.88x** (Referral: 91.4x / SEO: 46.4x / LinkedIn: 13.8x / PPC: 8.5x)
+
+### 📈 Task 3 Visual Analytics & Strategic Findings
+
+#### 1. Full Funnel Progression & Stage Drop-offs
+![Marketing Funnel Overview](visualizations/funnel/01_marketing_funnel_overview.png)
+- **Key Finding:** Top-of-funnel lead capture is strong at 6.14% (15,000 leads). End-to-end throughput converts 0.74% of initial visitors into 1,819 paying customers.
+
+#### 2. Channel Conversion Disparity: Traffic vs. Lead Quality
+![Channel Conversion Comparison](visualizations/funnel/02_channel_conversion_comparison.png)
+- **Key Finding:** Referral leads convert to customers at **28.0%**, compared to only 7.55% for Paid Search. LinkedIn Ads delivers a high-quality **21.1% conversion rate** with enterprise deal sizes ($8,500+).
+
+#### 3. Unit Economics & Capital Efficiency (CAC vs. ROAS)
+![CAC vs LTV and ROAS](visualizations/funnel/03_cac_vs_ltv_roas_by_channel.png)
+- **Key Finding:** Referral (**91.37x ROAS**, $78.61 CAC) and Organic SEO (**46.43x ROAS**, $111.07 CAC) deliver maximum capital efficiency. Paid Search consumes 34% of budget ($218.7K) at an **8.46x ROAS**, requiring budget reallocation toward high-intent terms.
+
+#### 4. Mid-Funnel Drop-off Waterfall
+![Funnel Drop-off Waterfall](visualizations/funnel/04_funnel_stage_dropoff_waterfall.png)
+- **Key Finding:** **48.85% of qualified leads (5,145 accounts) stall between MQL and SQL**. This represents the single largest bottleneck in the pipeline.
+
+#### 5. Sales Cycle Duration & Lead Velocity
+![Sales Cycle Velocity](visualizations/funnel/05_sales_cycle_velocity_by_channel.png)
+- **Key Finding:** Referral leads close in **34.8 days**, while complex enterprise deals require **52.1 days** due to security reviews and procurement friction.
+
+#### 6. Campaign Efficiency Matrix
+![Campaign Performance Matrix](visualizations/funnel/06_campaign_performance_matrix.png)
+
+#### 7. Executive Marketing Funnel Dashboard Summary
+![Executive Funnel Dashboard Summary](visualizations/funnel/07_executive_funnel_dashboard_summary.png)
+
+### 💡 Task 3 Strategic Growth Playbook
+1. **Plug the Mid-Funnel Leak:** Deploy instant calendar scheduling tools and a strict **<5-minute SDR outreach SLA** on inbound inquiries to reduce MQL-to-SQL drop-off.
+2. **Scale the Partner Channel:** Launch a formal partner referral program with **20% recurring revenue share** to capitalize on the 91.4x ROAS.
+3. **Rebalance PPC Budget:** Cut non-converting broad-match search terms by 30% and shift $50,000 into high-intent competitor displacement and LinkedIn ABM campaigns.
+4. **Compress Enterprise Sales Cycles:** Build standardized security compliance packets and ROI business cases to shave 10–14 days off the 52-day enterprise cycle.
 
 ---
 
@@ -102,39 +163,44 @@
 - **Product Catalog:** **3,922 SKUs** (Top 19.8% generate 80% of revenue - Pareto Principle)
 - **Global Footprint:** **38 Countries** (84.6% UK / 15.4% International export markets)
 
-### 📈 Task 1 Visual Analytics & Key Findings
-- **Q4 Holiday Seasonality:** Revenue peaked at **$1.51M in November 2011** (+98.2% MoM) driven by holiday shopping.
-- **Pareto Catalog Concentration:** Top 19.8% of products drive 80% of revenue; top items include *DOTCOM POSTAGE* ($206.2k) and *REGENCY CAKESTAND* ($174.5k).
-- **International Market Expansion:** International orders have a **3.2x higher AOV** than domestic UK retail orders.
-- **Customer RFM Segments:** Identified 628 high-value customers ($1.45M revenue) at risk (>90 days inactive).
-
 ---
 
 ## 🗂️ Complete Repository Directory Structure
 
 ```text
 FUTURE_DS_01/
+├── Marketing_Funnel_Dashboard.xlsx          # [Task 3] Visual Excel funnel dashboard with native charts
+├── marketing_funnel_and_conversion_analysis.ipynb # [Task 3] Natively executed Python funnel notebook
+├── funnel_analysis_report.md                # [Task 3] Comprehensive executive advisory report
+├── TASK3_README.md                          # [Task 3] Dedicated Task 3 documentation
+├── task3_linkedin_post.txt                  # [Task 3] Task 3 LinkedIn showcase post
+├── task3.txt                                # [Task 3] Assignment brief
 ├── Customer_Retention_Dashboard.xlsx        # [Task 2] Visual Excel retention dashboard with native charts
-├── customer_retention_and_churn_analysis.ipynb # [Task 2] Reproducible Python cohort & churn notebook
+├── customer_retention_and_churn_analysis.ipynb # [Task 2] Natively executed Python cohort & churn notebook
 ├── retention_analysis_report.md             # [Task 2] Comprehensive executive advisory report
 ├── TASK2_README.md                          # [Task 2] Dedicated Task 2 documentation
-├── task2_linkedin_post.txt                  # [Task 2] LinkedIn showcase post
+├── task2_linkedin_post.txt                  # [Task 2] Task 2 LinkedIn showcase post
 ├── task2.txt                                # [Task 2] Assignment brief
 ├── Retail_Sales_Dashboard.xlsx              # [Task 1] Visual Excel sales dashboard
 ├── FUTURE_DS_01.pbix                        # [Task 1] Power BI data model
 ├── sales_analysis_and_dashboard.ipynb       # [Task 1] Jupyter sales analysis notebook
 ├── analysis_report.md                       # [Task 1] Task 1 Executive BI report
-├── linkedin_post.txt                        # [Task 1] LinkedIn post
+├── linkedin_post.txt                        # [Task 1] Task 1 LinkedIn post
 ├── PROJECT_SUMMARY_CONTEXT.md               # Portfolio context summary
 ├── README.md                                # Master Portfolio Documentation
 ├── data/
 │   ├── data.csv                             # [Task 1] 540k+ retail transaction dataset
 │   ├── telco_customer_churn.csv             # [Task 2] Raw customer churn dataset
-│   └── telco_customer_churn_cleaned.csv     # [Task 2] Cleaned dataset with risk scoring
+│   ├── telco_customer_churn_cleaned.csv     # [Task 2] Cleaned dataset with risk scoring
+│   ├── marketing_funnel_summary.csv         # [Task 3] 244k visitors multi-channel summary
+│   └── marketing_funnel_leads.csv           # [Task 3] 15,000 granular lead journey records
 ├── scripts/                                 # Build automation scripts
 │   ├── build_excel_dashboard.py
-│   ├── build_jupyter_notebook.py
-│   └── create_charts.py
+│   ├── build_and_execute_notebook.py
+│   ├── create_charts.py
+│   ├── build_funnel_excel.py
+│   ├── build_and_execute_funnel_notebook.py
+│   └── create_funnel_charts.py
 └── visualizations/                          # 300 DPI High-Resolution Visualizations
     ├── 01_monthly_revenue_trend.png         # [Task 1]
     ├── 02_top_10_products_revenue.png       # [Task 1]
@@ -144,14 +210,22 @@ FUTURE_DS_01/
     ├── 06_order_value_distribution.png      # [Task 1]
     ├── 07_rfm_customer_segments.png         # [Task 1]
     ├── 08_executive_dashboard_summary.png   # [Task 1]
-    └── retention/                           # [Task 2] Customer Retention Visualizations
-        ├── 01_churn_overview_and_revenue.png
-        ├── 02_tenure_bracket_retention.png
-        ├── 03_contract_risk_breakdown.png
-        ├── 04_fiber_optic_service_paradox.png
-        ├── 05_payment_method_friction.png
-        ├── 06_clv_and_tenure_progression.png
-        └── 07_executive_retention_dashboard_summary.png
+    ├── retention/                           # [Task 2] Customer Retention Visualizations
+    │   ├── 01_churn_overview_and_revenue.png
+    │   ├── 02_tenure_bracket_retention.png
+    │   ├── 03_contract_risk_breakdown.png
+    │   ├── 04_fiber_optic_service_paradox.png
+    │   ├── 05_payment_method_friction.png
+    │   ├── 06_clv_and_tenure_progression.png
+    │   └── 07_executive_retention_dashboard_summary.png
+    └── funnel/                              # [Task 3] Marketing Funnel Visualizations
+        ├── 01_marketing_funnel_overview.png
+        ├── 02_channel_conversion_comparison.png
+        ├── 03_cac_vs_ltv_roas_by_channel.png
+        ├── 04_funnel_stage_dropoff_waterfall.png
+        ├── 05_sales_cycle_velocity_by_channel.png
+        ├── 06_campaign_performance_matrix.png
+        └── 07_executive_funnel_dashboard_summary.png
 ```
 
 ---
