@@ -41,10 +41,10 @@
 - **Marketing Qualified Leads (MQL):** **10,533 MQLs** (70.22% Lead-to-MQL rate)
 - **Sales Qualified Leads (SQL):** **5,388 SQLs** (**51.15% MQL-to-SQL rate** - *The Mid-Funnel Leak*)
 - **Closed Won Customers:** **1,819 Customers** (**12.13% Lead-to-Customer conversion**; 0.74% overall visitor-to-customer)
-- **Total Marketing Spend:** **$643,724.00** across 6 acquisition channels
+- **Total Marketing Spend:** **$569,100.00** across 6 acquisition channels
 - **Pipeline Revenue Generated:** **$10,868,627.35** (Average deal size: **$5,975.06**)
-- **Blended Customer CAC:** **$353.89** (Referral: $78.61 vs. Paid Search: $635.72)
-- **Portfolio Blended ROAS:** **16.88x** (Referral: 91.4x / SEO: 46.4x / LinkedIn: 13.8x / PPC: 8.5x)
+- **Blended Customer CAC:** **$312.86** (Referral: $78.61 vs. LinkedIn: $619.25 / Paid Search: $534.69)
+- **Portfolio Blended ROAS:** **19.10x** (Referral: 91.4x / SEO: 46.4x / LinkedIn: 13.8x / PPC: 8.5x)
 
 ### 📈 Task 3 Visual Analytics & Strategic Findings
 
@@ -54,11 +54,11 @@
 
 #### 2. Channel Conversion Disparity: Traffic vs. Lead Quality
 ![Channel Conversion Comparison](visualizations/funnel/02_channel_conversion_comparison.png)
-- **Key Finding:** Referral leads convert to customers at **28.0%**, compared to only 7.55% for Paid Search. LinkedIn Ads delivers a high-quality **21.1% conversion rate** with enterprise deal sizes ($8,500+).
+- **Key Finding:** Referral leads convert to customers at **28.0%** (328 customers / 1,172 leads), 3.1x higher than Paid Search (8.98%). LinkedIn Ads delivers a **15.34% conversion rate** (407 customers / 2,653 leads) with enterprise deal sizes ($8,500+).
 
 #### 3. Unit Economics & Capital Efficiency (CAC vs. ROAS)
 ![CAC vs LTV and ROAS](visualizations/funnel/03_cac_vs_ltv_roas_by_channel.png)
-- **Key Finding:** Referral (**91.37x ROAS**, $78.61 CAC) and Organic SEO (**46.43x ROAS**, $111.07 CAC) deliver maximum capital efficiency. Paid Search consumes 34% of budget ($218.7K) at an **8.46x ROAS**, requiring budget reallocation toward high-intent terms.
+- **Key Finding:** Referral (**91.37x ROAS**, $78.61 CAC) and Organic SEO (**46.43x ROAS**, $111.07 CAC) deliver maximum capital efficiency. Paid Search consumes 38.4% of budget ($218.7K of $569.1K) at an **8.46x ROAS**, requiring budget reallocation toward high-intent terms.
 
 #### 4. Mid-Funnel Drop-off Waterfall
 ![Funnel Drop-off Waterfall](visualizations/funnel/04_funnel_stage_dropoff_waterfall.png)

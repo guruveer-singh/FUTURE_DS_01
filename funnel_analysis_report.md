@@ -22,7 +22,7 @@ This strategic analytics engagement evaluated **244,178 multi-channel website se
 | (100% Baseline Sessions) | (6.14% Traffic-to-Lead)  | (12.13% Lead-to-Customer)| (Avg Deal Size: $5,975)|
 +--------------------------+--------------------------+--------------------------+------------------------+
 |    TOTAL MARKETING SPEND |   BLENDED CUSTOMER CAC   |    PORTFOLIO BLENDED ROAS|   OVERALL FUNNEL CONV  |
-|       $643,724.00        |         $353.89          |          16.88x          |          0.74%         |
+|       $569,100.00        |         $312.86          |          19.10x          |          0.74%         |
 |  (Across 6 Channels)     | (Referral: $79 / LI: $619)|  (Ref: 91.4x / PPC: 8.5x) |  (Visitors to Won)     |
 +--------------------------+--------------------------+--------------------------+------------------------+
 ```
@@ -30,7 +30,7 @@ This strategic analytics engagement evaluated **244,178 multi-channel website se
 ### 🎯 Key Strategic Takeaways
 1. **The Critical Mid-Funnel Leak (-48.85% MQL-to-SQL Drop-off):** While top-of-funnel lead capture (6.14%) and lead-to-MQL qualification (70.22%) are healthy, **nearly half of all qualified leads (5,145 accounts) stall between MQL and SQL**. Prospects express initial interest but drop off before completing a sales demo or discovery meeting.
 2. **Referral / Partner Channel Is the Underscaled Gem (91.37x ROAS):** Referrals convert at an astronomical **28.0% lead-to-customer rate** with the portfolio's lowest CAC (**$78.61**), yet account for only **7.8% of captured leads** (1,172 leads). Scaling this partner network is the single highest-leverage growth priority.
-3. **Paid Search (Google) Capital Inefficiency ($534.69 CAC, 8.46x ROAS):** Paid Search consumes the largest share of budget (**$218.7K / 34.0%**), yet delivers below-average deal sizes ($4,500) and the lowest ROAS (8.46x). High bid costs on non-converting generic keywords are diluting profitability.
+3. **Paid Search (Google) Capital Inefficiency ($534.69 CAC, 8.46x ROAS):** Paid Search consumes the largest share of budget (**$218.7K / 38.4%**), yet delivers below-average deal sizes ($4,522) and the lowest ROAS (8.46x). High bid costs on non-converting generic keywords are diluting profitability.
 4. **LinkedIn Drives Enterprise Dominance ($3.47M Revenue):** Despite a high CAC ($619.25), LinkedIn Ads generates the highest total pipeline revenue ($3.47M) and largest average deal sizes ($8,500+), proving highly effective for mid-market and enterprise targeting.
 
 ---
@@ -64,18 +64,18 @@ Analyzing lead progression segmented by acquisition source reveals vast disparit
 
 | Acquisition Channel | Visitors | Captured Leads | Won Customers | Traffic->Lead % | Lead->Customer % | Marketing Spend | Pipeline Revenue | CAC ($) | ROAS |
 |---|---|---|---|---|---|---|---|---|---|
-| **LinkedIn Ads** | 58,366 | 2,653 | 560 | 4.55% | 21.11% | $252,035.00 | **$3,471,606.21** | $450.06 | **13.77x** |
+| **LinkedIn Ads** | 58,366 | 2,653 | 407 | 4.55% | 15.34% | $252,035.00 | **$3,471,606.21** | $619.25 | **13.77x** |
 | **Organic Search (SEO)** | 55,216 | 3,808 | 480 | 6.90% | 12.61% | $53,312.00 | **$2,475,082.71** | $111.07 | **46.43x** |
 | **Referral / Partner** | 14,064 | 1,172 | 328 | 8.33% | **27.99%** | $25,784.00 | **$2,355,845.69** | **$78.61** | **91.37x** |
-| **Paid Search (Google)** | 82,008 | 4,556 | 344 | 5.56% | 7.55% | $218,688.00 | **$1,849,523.71** | $635.72 | **8.46x** |
-| **Email Marketing** | 17,420 | 1,742 | 87 | **10.00%** | 4.99% | $13,936.00 | **$543,751.62** | $160.18 | **39.02x** |
-| **Direct Traffic** | 17,104 | 1,069 | 20 | 6.25% | 1.87% | $5,345.00 | **$172,817.41** | $267.25 | **32.33x** |
-| **Portfolio Total / Blended** | **244,178** | **15,000** | **1,819** | **6.14%** | **12.13%** | **$643,724.00** | **$10,868,627.35** | **$353.89** | **16.88x** |
+| **Paid Search (Google)** | 82,008 | 4,556 | 409 | 5.56% | 8.98% | $218,688.00 | **$1,849,523.71** | $534.69 | **8.46x** |
+| **Email Marketing** | 17,420 | 1,742 | 147 | **10.00%** | 8.44% | $13,936.00 | **$543,751.62** | $94.80 | **39.02x** |
+| **Direct Traffic** | 17,104 | 1,069 | 48 | 6.25% | 4.49% | $5,345.00 | **$172,817.41** | $111.35 | **32.33x** |
+| **Portfolio Total / Blended** | **244,178** | **15,000** | **1,819** | **6.14%** | **12.13%** | **$569,100.00** | **$10,868,627.35** | **$312.86** | **19.10x** |
 
 ### Strategic Channel Insights
 1. **The Referral Powerhouse:** Generates $2.36M in revenue on only $25.8K in investment, delivering a **91.4x ROAS**. Prospects arriving via warm recommendation have pre-established trust, leading to 2.3x higher close rates than paid ads.
 2. **Organic SEO Engine:** Delivers 3,808 leads at an ultra-low CAC of $111.07 and 46.4x ROAS. High domain authority and non-branded educational blog posts capture compounding search intent without marginal ad cost.
-3. **PPC Optimization Imperative:** Paid Search suffers from low lead-to-customer conversion (7.55%) because broad match keywords attract informational searchers rather than buyers ready for enterprise implementation.
+3. **PPC Optimization Imperative:** Paid Search suffers from low lead-to-customer conversion (8.98%) and elevated CAC ($534.69) because broad match keywords attract informational searchers rather than buyers ready for enterprise implementation.
 
 ---
 
@@ -121,7 +121,7 @@ Analyzing the timeline from initial lead generation to closed contract reveals c
 - **Intervention:** Launch a structured Partner Program offering a **20% first-year recurring commission** to system integrators, consultants, and complementary software vendors.
 
 ### Pillar 3: PPC Budget Rebalancing to High-Intent Terms
-- **Problem:** Generic keyword bidding generates high visitor counts at an unsustainable $635.72 CAC.
+- **Problem:** Generic keyword bidding generates high visitor counts at an elevated $534.69 CAC and modest 8.46x ROAS.
 - **Intervention:** Cut non-converting broad-match keywords by 30%. Reallocate $50,000 toward high-intent competitor displacement keywords (e.g., "[Competitor] alternatives") and retargeting campaigns.
 
 ### Pillar 4: Enterprise Sales Enablement Toolkit

@@ -13,8 +13,8 @@ As part of my Data Science & Analytics Internship with Future Interns, I complet
 💡 Key Business Findings & Discoveries:
 📌 The Mid-Funnel Leak: While top-of-funnel capture was healthy (6.14% traffic-to-lead), nearly half of all qualified leads (5,145 accounts / 48.9%) stalled between MQL and SQL before booking a sales demo.
 📌 The Referral Goldmine (91.4x ROAS): Referral and partner channels delivered an astounding 28.0% lead-to-customer conversion at a $78.61 CAC, yet accounted for only 7.8% of lead volume—representing our highest-leverage scaling opportunity.
-📌 Paid Search (Google) Capital Inefficiency: Paid search consumed 34% of marketing budget ($218.7K) but delivered the lowest ROAS (8.5x) and a $535 CAC, showing that broad keywords attracted low-intent searchers.
-📌 LinkedIn Enterprise Dominance: Despite a higher CAC ($450), LinkedIn Ads drove $3.47M in revenue with large $8.5K+ average deal sizes, proving essential for enterprise pipeline generation.
+📌 Paid Search (Google) Capital Inefficiency: Paid search consumed 38.4% of marketing budget ($218.7K of $569.1K) but delivered the lowest ROAS (8.5x) and an 8.98% lead conversion rate, showing that broad keywords attracted low-intent searchers.
+📌 LinkedIn Enterprise Dominance: Despite a higher CAC ($619.25), LinkedIn Ads drove $3.47M in revenue across 407 won accounts (15.34% conversion) with large $8.5K+ average deal sizes, proving essential for enterprise pipeline generation.
 📌 Lead Velocity Dynamics: Referral leads closed in an average of 34.8 days, whereas complex enterprise accounts required 52.1 days.
 📌 Revenue Leverage: Improving MQL-to-SQL conversion by just +5% injects +$1.05M in incremental revenue without spending an additional dollar on ads!
 

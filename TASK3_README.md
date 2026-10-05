@@ -33,10 +33,10 @@
 | **Marketing Qualified (MQL)** | **10,533 MQLs** | 70.22% Lead-to-MQL qualification rate |
 | **Sales Qualified (SQL)** | **5,388 SQLs** | **51.15% MQL-to-SQL conversion rate** (Primary mid-funnel bottleneck) |
 | **Closed Won Customers** | **1,819 Customers** | **12.13% Lead-to-Customer conversion** (0.74% overall visitor-to-customer) |
-| **Total Marketing Spend** | **$643,724.00** | Blended across Paid Search, SEO, LinkedIn, Email, Referral, Direct |
+| **Total Marketing Spend** | **$569,100.00** | Blended across Paid Search, SEO, LinkedIn, Email, Referral, Direct |
 | **Pipeline Revenue Generated** | **$10,868,627.35** | Average closed customer deal size: **$5,975.06** |
-| **Blended Customer CAC** | **$353.89** | Referral: $78.61 vs. Paid Search: $635.72 |
-| **Blended Portfolio ROAS** | **16.88x** | Referral (91.4x) and SEO (46.4x) drive maximum capital efficiency |
+| **Blended Customer CAC** | **$312.86** | Referral: $78.61 vs. LinkedIn: $619.25 / Paid Search: $534.69 |
+| **Blended Portfolio ROAS** | **19.10x** | Referral (91.4x) and SEO (46.4x) drive maximum capital efficiency |
 
 ---
 
@@ -51,15 +51,15 @@
 
 ### 2. Channel Conversion Disparity: Traffic vs. Lead Quality
 ![Channel Conversion Comparison](visualizations/funnel/02_channel_conversion_comparison.png)
-- **Referral Channel Dominance:** Converts at **28.0% lead-to-customer**, 3.7x higher than Paid Search (7.55%).
-- **LinkedIn Quality:** Delivers a **21.1% lead-to-customer rate**, capturing high-intent corporate buyers.
+- **Referral Channel Dominance:** Converts at **28.0% lead-to-customer** (328 customers / 1,172 leads), 3.1x higher than Paid Search (8.98%).
+- **LinkedIn Quality:** Delivers a **15.34% lead-to-customer rate** (407 customers / 2,653 leads), capturing high-intent corporate buyers with large $8.5K+ average deal sizes.
 
 ---
 
 ### 3. Unit Economics & Capital Efficiency (CAC vs. ROAS)
 ![CAC vs LTV and ROAS](visualizations/funnel/03_cac_vs_ltv_roas_by_channel.png)
 - **Capital Allocation:** Referral delivers **91.37x ROAS** ($78.61 CAC) and Organic SEO delivers **46.43x ROAS** ($111.07 CAC).
-- **PPC Rebalancing:** Paid Search consumes 34% of spend ($218.7K) at an **8.46x ROAS**, requiring shift toward high-intent keyword targeting.
+- **PPC Rebalancing:** Paid Search consumes 38.4% of spend ($218.7K of $569.1K) at an **8.46x ROAS**, requiring shift toward high-intent keyword targeting.
 
 ---
 

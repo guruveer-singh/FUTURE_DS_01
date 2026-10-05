@@ -77,7 +77,7 @@ create_kpi_card(ws_dash, 1, 5, 3, 7, "TOTAL WEBSITE TRAFFIC", "244,178", "100% B
 create_kpi_card(ws_dash, 4, 5, 6, 7, "CAPTURED LEADS", "15,000", "Traffic-to-Lead: 6.14%", '2563EB')
 create_kpi_card(ws_dash, 7, 5, 9, 7, "WON CUSTOMERS", "1,819", "Lead-to-Customer: 12.13%", '0D9488')
 create_kpi_card(ws_dash, 10, 5, 11, 7, "PIPELINE REVENUE", "$10.87M", "Average Won Deal: $5,975", '10B981')
-create_kpi_card(ws_dash, 12, 5, 14, 7, "BLENDED CAC & ROAS", "$354 / 16.9x", "$643.7K Spend | 16.9x Return", '6366F1')
+create_kpi_card(ws_dash, 12, 5, 14, 7, "BLENDED CAC & ROAS", "$313 / 19.1x", "$569.1K Spend | 19.1x Return", '6366F1')
 
 # Table A: Funnel Stages & Drop-off (Cols A to E, Rows 9 to 16)
 ws_dash.merge_cells('A9:E9')
@@ -239,7 +239,7 @@ takeaways = [
      "Referral/Partner delivers an industry-leading 28.0% lead-to-customer conversion and $78.61 CAC, yet represents only 7.8% of lead volume. Formalize a structured co-marketing and partner referral tier with 20% revenue share to 3x partner lead volume."),
     
     ("3. Rebalance Paid Search to Eliminate Low-Intent Budget Drain ($535 CAC, 8.5x ROAS):",
-     "Paid Search consumes 34.0% of total budget ($218.7K) but yields the lowest ROAS (8.5x) and a 12.1% lead-to-customer rate. Shift 25% of generic PPC budget into high-intent competitor displacement keywords and LinkedIn Enterprise retargeting."),
+     "Paid Search consumes 38.4% of total budget ($218.7K) but yields the lowest ROAS (8.5x) and an 8.98% lead-to-customer rate. Shift 25% of generic PPC budget into high-intent competitor displacement keywords and LinkedIn Enterprise retargeting."),
     
     ("4. Accelerate Enterprise Velocity (52-Day Sales Cycle on $8.5K Deals):",
      "Enterprise leads take 52 days to close compared to 28 days for mid-market. Deploy customized ROI calculators, security compliance packages, and executive sponsor outreach early in the evaluation stage to compress deal velocity by 10-14 days.")

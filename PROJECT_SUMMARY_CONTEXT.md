@@ -11,7 +11,7 @@
 
 ### 1. Deliverables Completed
 1. **Interactive Excel Dashboard (`Marketing_Funnel_Dashboard.xlsx`)**:
-   - Tab 1: `Executive Dashboard` - Dark slate header, 6 KPI summary cards (Visitors: 244,178, Leads: 15,000, Won Customers: 1,819, Overall Conv: 12.13%, Total Pipeline Revenue: $10.87M, Blended CAC: $353.89, Blended ROAS: 16.88x), 3 native charts (Conversion Rate by Channel, CAC vs LTV Comparison, Mid-Funnel Stage Drop-Off), and Strategic Optimization Playbook.
+   - Tab 1: `Executive Dashboard` - Dark slate header, 6 KPI summary cards (Visitors: 244,178, Leads: 15,000, Won Customers: 1,819, Overall Conv: 12.13%, Total Pipeline Revenue: $10.87M, Blended CAC: $312.86, Blended ROAS: 19.10x), 3 native charts (Conversion Rate by Channel, CAC vs LTV Comparison, Mid-Funnel Stage Drop-Off), and Strategic Optimization Playbook.
    - Tab 2: `Funnel Stage Matrix` - Full stage-by-stage counts, progression rates, drop-off volumes, and stage velocity across all 6 acquisition channels.
    - Tab 3: `Campaign ROI Breakdown` - 18 granular marketing campaigns with channel tags, spend, lead yield, conversion %, revenue, CAC, and ROAS metrics.
    - Tab 4: `Lead Journey Data` - 15,000 lead records with industry, company tier, cycle days, contract value, and won status.
@@ -28,9 +28,9 @@
 
 ### 2. Core Business Metrics & Insights
 - **Funnel Performance:** 244,178 Visitors → 15,000 Leads (6.14% visit-to-lead) → 10,533 MQL (70.22%) → 5,388 SQL (51.15%) → 1,819 Won Customers (33.76% win rate). Blended Lead-to-Customer: 12.13%.
-- **Revenue & Unit Economics:** $10,868,627.35 in generated pipeline revenue against $643,724.00 total spend; Blended CAC: $353.89; Blended ROAS: 16.88x; Mean Won ACV: $5,975.06.
+- **Revenue & Unit Economics:** $10,868,627.35 in generated pipeline revenue against $569,100.00 total spend; Blended CAC: $312.86; Blended ROAS: 19.10x; Mean Won ACV: $5,975.06.
 - **Mid-Funnel Bottleneck:** 48.85% drop-off between MQL and SQL (5,145 leads lost) before demo booking due to SDR qualification latency and lack of interactive product tours.
-- **Channel Asymmetry:** Referral/Partner delivers 28.00% lead-to-customer conversion at $78.61 CAC (91.39x ROAS), whereas Paid Search consumes 34% of spend ($218.7K) at 8.46x ROAS ($635.72 CAC).
+- **Channel Asymmetry:** Referral/Partner delivers 27.99% lead-to-customer conversion at $78.61 CAC (91.37x ROAS), whereas Paid Search consumes 38.4% of spend ($218.7K of $569.1K) at 8.46x ROAS ($534.69 CAC). LinkedIn Ads drives $3.47M in revenue across 407 customers ($619.25 CAC, 13.77x ROAS).
 - **Sales Velocity:** Overall mean cycle velocity is 33.5 days. Enterprise accounts ($8.5K+ ACV) require 52.1 days vs 18.4 days for Startups.
 
 ---
