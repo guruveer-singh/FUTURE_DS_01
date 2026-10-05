@@ -1,22 +1,30 @@
-🚀 Excited to share my latest Data Science & Business Intelligence project with Future Interns! 📊
+ 📊 Just completed an exciting sales data analysis project as part of my Future Interns experience!
 
-As part of my Data Science Internship (Task 1), I analyzed 540,000+ retail sales transactions totaling $10.67M in revenue to build an end-to-end Executive Sales Intelligence Dashboard & Strategic Advisory Report.
+🔍 **Project**: Analyzed retail transaction data (541,909 records) to identify business growth opportunities for an online retailer
 
-🔍 Key Questions Solved:
-1️⃣ How does revenue evolve over time? → Uncovered massive Q4 holiday seasonality peaking at $1.51M in Nov (+98.2% MoM).
-2️⃣ Which products drive the business? → Validated the Pareto Principle (80/20 Rule): Top 19.8% of SKUs generate 80% of total revenue!
-3️⃣ Where are international growth opportunities? → International markets (Netherlands, Germany, France) boast an Average Order Value 3.2x higher than domestic UK orders ($3,000+ vs $500).
-4️⃣ How to optimize customer retention? → Segmented 4,338 customers using RFM analysis, identifying $1.45M in at-risk customer revenue for automated win-back workflows.
+🎯 **Key Insights Discovered**:
+• Top revenue drivers include seasonal/gift items and shipping services
+• Clear seasonal patterns with Q4 peaks driven by holiday shopping
+• Strong UK presence with meaningful international customer base (France, Germany, Australia, etc.)
+• Significant opportunities in customer segmentation and product bundling
 
-🛠️ Tools & Stack Used:
-• Python (Pandas, NumPy) for data cleaning and pipeline engineering
-• Plotly, Seaborn & Matplotlib for publication-grade 300 DPI visualizations
-• Streamlit & Tailwind CSS / HTML5 for standalone interactive dashboards
-• RFM Customer Segmentation & Pareto Analysis
+📈 **Skills Applied**:
+• Data cleaning & preparation (handling 45MB CSV dataset)
+• Business-focused KPI analysis (revenue, transactions, AOV)
+• Trend and performance analysis (time series, geographic)
+• Insight generation and reporting
+• Business storytelling using data
 
-📁 GitHub Repository & Interactive Dashboards:
-[Link to your GitHub repo]
+🛠️ **Tools Used**:
+• Command-line exploration (awk, sort, head/tail) for initial insights
+• Excel/Power BI recommended for dashboard creation
+• GitHub for project documentation and sharing
 
-Huge thanks to Future Interns for this hands-on, industry-standard analytics challenge!
+💡 **Key Takeaway**: Even with basic analytical approaches, meaningful business insights emerge that can drive real decisions around inventory planning, marketing targeting, and product strategy.
 
-#DataScience #DataAnalytics #BusinessIntelligence #Python #Streamlit #DataVisualization #Dashboard #MachineLearning #FutureInterns #Internship #EDA #PortfolioProject
+🚀 Next steps: Creating interactive visualizations and finalizing recommendations for stakeholders!
+
+#DataAnalysis #BusinessIntelligence #RetailAnalytics #FutureInterns #DataVisualization #AnalyticsProjects
+
+👉 [Link to GitHub repository when available]
+📍 Tagging @Future Interns as requested in the task guidelines

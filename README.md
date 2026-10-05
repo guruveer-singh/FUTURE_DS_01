@@ -1,32 +1,25 @@
 # 📊 Future Interns - Task 1: Retail Sales Data Analysis & Executive Dashboard
 
-[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
-[![Pandas](https://img.shields.io/badge/Pandas-3.0-150458.svg?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Plotly](https://img.shields.io/badge/Plotly-Interactive-3F4F75.svg?logo=plotly&logoColor=white)](https://plotly.com/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Modern_UI-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Excel](https://img.shields.io/badge/Excel-Dashboard_Ready-217346.svg?logo=microsoft-excel&logoColor=white)](Retail_Sales_Dashboard.xlsx)
+[![PowerBI](https://img.shields.io/badge/Power_BI-PBIX_Model-F2C811.svg?logo=power-bi&logoColor=black)](FUTURE_DS_01.pbix)
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](sales_analysis_and_dashboard.ipynb)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?logo=jupyter&logoColor=white)](sales_analysis_and_dashboard.ipynb)
 [![Status](https://img.shields.io/badge/Status-Client--Ready_Production-success.svg)]()
 
 > **Internship Task 1 Deliverable for Future Interns**  
-> An end-to-end data analytics, business intelligence, and executive decision-support system analyzing **540k+ retail transactions** ($10.67M gross revenue) to uncover growth opportunities, customer segments, and operational efficiencies.
+> An end-to-end data analytics and business intelligence project analyzing **540,000+ retail sales transactions** ($10.67M gross revenue) to answer core business questions on revenue trends, top-selling products, regional profitability, and strategic growth opportunities.
 
 ---
 
-## 🌟 Live Interactive Dashboards
+## 📑 Core Project Deliverables
 
-You can explore the interactive dashboards in two ways:
-
-1. **Standalone Executive Web Dashboard (`dashboard.html` / `index.html`)**:
-   - Open [dashboard.html](file:///D:/FUTURE_DS_01/dashboard.html) directly in any web browser (Chrome, Edge, Safari, Firefox).
-   - Features dynamic KPI metric cards, Plotly.js charts, dark/light theme switching, PDF export, and interactive tabs.
-   - Ready for instant deployment on **GitHub Pages**.
-
-2. **Streamlit Interactive Web Application (`app.py`)**:
-   - Run locally via terminal:
-     ```bash
-     streamlit run app.py
-     ```
-   - Offers real-time date filtering, country multi-select, interactive sliders, data exploration tables, and CSV exports.
+| Deliverable | File | Description |
+|---|---|---|
+| **Executive Excel Dashboard** | **[Retail_Sales_Dashboard.xlsx](Retail_Sales_Dashboard.xlsx)** | Client-ready visual Excel dashboard with formatted KPI cards, native Excel charts (Monthly Trend, Top Products, Geo Share, Order Tiers), and strategic takeaways. |
+| **Power BI Model** | **[FUTURE_DS_01.pbix](FUTURE_DS_01.pbix)** | Power BI project file pre-loaded with the complete retail transaction data model. |
+| **Analysis & Advisory Report** | **[analysis_report.md](analysis_report.md)** | Comprehensive markdown business report detailing findings, Pareto concentration, and growth recommendations. |
+| **Jupyter Analytics Notebook** | **[sales_analysis_and_dashboard.ipynb](sales_analysis_and_dashboard.ipynb)** | End-to-end reproducible Python notebook covering data cleaning, EDA, KPI engineering, and statistical analysis. |
+| **LinkedIn Showcase Post** | **[linkedin_post.txt](linkedin_post.txt)** | Submission text ready to share on LinkedIn, tagging Future Interns. |
 
 ---
 
@@ -37,7 +30,7 @@ You can explore the interactive dashboards in two ways:
 | **Total Gross Revenue** | **$10,666,684.54** | Validated across 530,104 non-cancelled transactions |
 | **Total Completed Orders** | **19,960** | Unique invoice orders across 13 months |
 | **Active Customer Base** | **4,338** | Repeat purchase rate of 65.4% |
-| **Average Order Value (AOV)** | **$534.40** | Median consumer basket: ~$150-$300; B2B wholesale: >$2,500 |
+| **Average Order Value (AOV)** | **$534.40** | Median retail basket: ~$150-$300; Wholesale B2B: >$2,500 |
 | **Total Product Catalog** | **3,922 SKUs** | Top 19.8% generate 80% of revenue (Pareto Principle) |
 | **Global Market Footprint** | **38 Countries** | 84.6% United Kingdom / 15.4% International export markets |
 
@@ -77,12 +70,12 @@ You can explore the interactive dashboards in two ways:
 ![RFM Segments](visualizations/07_rfm_customer_segments.png)
 - **Key Finding**: 
   - **Champions & Loyalists (38.2%)**: Drive >60% of total sales.
-  - **At Risk / High Value (14.5%)**: 628 high-spending customers have not ordered in >90 days.
+  - **At Risk / High Value (14.5%)**: 628 high-spending customers have not ordered in >90 days ($1.45M revenue at risk).
 - **Business Action**: Implement automated 60-day and 90-day win-back nurture sequences with personalized VIP incentives.
 
 ---
 
-### 6. Master 4K Executive Infographic Dashboard
+### 6. Master Executive Infographic Summary
 ![Master Executive Dashboard](visualizations/08_executive_dashboard_summary.png)
 
 ---
@@ -91,60 +84,24 @@ You can explore the interactive dashboards in two ways:
 
 ```text
 FUTURE_DS_01/
-├── app.py                             # Interactive Streamlit analytics application
-├── dashboard.html                     # Standalone interactive HTML5/Tailwind/Plotly dashboard
-├── index.html                         # GitHub Pages deployable entry point
+├── Retail_Sales_Dashboard.xlsx        # Client-ready visual Excel dashboard with native charts
+├── FUTURE_DS_01.pbix                  # Power BI report file with data model
 ├── sales_analysis_and_dashboard.ipynb # Complete reproducible Jupyter Notebook
 ├── analysis_report.md                 # Detailed Executive Business Intelligence Report
 ├── linkedin_post.txt                  # Formatted LinkedIn showcase post
 ├── task1.txt                          # Original assignment brief
 ├── data/
 │   └── data.csv                       # Raw sales transaction dataset (541k+ rows)
-├── visualization_ready/               # Clean aggregated CSV summaries
-│   ├── monthly_sales_summary.csv
-│   ├── top_products_summary.csv
-│   ├── country_performance_summary.csv
-│   └── customer_rfm_segments.csv
-├── visualizations/                    # 300 DPI High-Resolution Visual Charts
-│   ├── 01_monthly_revenue_trend.png
-│   ├── 02_top_10_products_revenue.png
-│   ├── 03_revenue_by_country.png
-│   ├── 04_sales_heatmap_day_hour.png
-│   ├── 05_pareto_analysis.png
-│   ├── 06_order_value_distribution.png
-│   ├── 07_rfm_customer_segments.png
-│   └── 08_executive_dashboard_summary.png
-└── scripts/
-    ├── generate_analysis_and_charts.py # Automated data pipeline & chart generator
-    └── build_notebook.py               # Jupyter Notebook generator
+└── visualizations/                    # 300 DPI High-Resolution Visual Charts
+    ├── 01_monthly_revenue_trend.png
+    ├── 02_top_10_products_revenue.png
+    ├── 03_revenue_by_country.png
+    ├── 04_sales_heatmap_day_hour.png
+    ├── 05_pareto_analysis.png
+    ├── 06_order_value_distribution.png
+    ├── 07_rfm_customer_segments.png
+    └── 08_executive_dashboard_summary.png
 ```
-
----
-
-## 🚀 How to Run & Reproduce
-
-### 1. Clone & Set Up Environment
-```bash
-# Clone the repository
-git clone https://github.com/your-username/FUTURE_DS_01.git
-cd FUTURE_DS_01
-
-# Install required dependencies
-pip install pandas numpy matplotlib seaborn plotly streamlit openpyxl
-```
-
-### 2. Generate All Visuals & Aggregations
-```bash
-python scripts/generate_analysis_and_charts.py
-```
-
-### 3. Launch Interactive Streamlit App
-```bash
-streamlit run app.py
-```
-
-### 4. View Standalone Web Dashboard
-Double-click [dashboard.html](file:///D:/FUTURE_DS_01/dashboard.html) or open it in any web browser.
 
 ---
 
@@ -159,5 +116,5 @@ Double-click [dashboard.html](file:///D:/FUTURE_DS_01/dashboard.html) or open it
 
 ## 👨‍💻 Author & Acknowledgements
 - **Program**: Future Interns Data Science Internship Program (Task 1)
-- **Tools**: Python, Pandas, Matplotlib, Seaborn, Plotly, Streamlit, HTML5, Tailwind CSS
+- **Tools**: Microsoft Excel, Power BI, Python, Pandas, Matplotlib, Seaborn
 - **LinkedIn Submission**: [Future Interns](https://www.linkedin.com/company/future-interns/)
