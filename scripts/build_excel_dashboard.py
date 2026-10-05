@@ -96,7 +96,7 @@ create_kpi_card(ws_dash, 1, 5, 3, 7, "TOTAL CUSTOMER BASE", "7,043", "5,174 Reta
 create_kpi_card(ws_dash, 4, 5, 6, 7, "OVERALL CHURN RATE", "26.54%", "Benchmark: SaaS target < 5-8%", 'E11D48')
 create_kpi_card(ws_dash, 7, 5, 9, 7, "MONTHLY MRR LOSS", "$139,131", "Annualized Run-Rate: $1.67M / yr", 'E11D48')
 create_kpi_card(ws_dash, 10, 5, 11, 7, "YEAR-1 RETENTION RATE", "52.56%", "47.4% churn in first 12 months", 'D97706')
-create_kpi_card(ws_dash, 12, 5, 14, 7, "AVG CUSTOMER LIFETIME", "32.4 Mos", "LTV expands from $275 to $5,180", '0D9488')
+create_kpi_card(ws_dash, 12, 5, 14, 7, "MEAN OBSERVED TENURE", "32.4 Mos", "Snapshot active base (right-censored)", '0D9488')
 
 # SECTION 1: Summary Tables for Native Charts (Row 9 to 25)
 # Table A: Churn by Contract (Cols A to D)
@@ -138,10 +138,10 @@ for row_idx, row in enumerate(contract_data, start=11):
             c.alignment = Alignment(horizontal='right')
             c.number_format = '$#,##0'
 
-# Table B: Churn by Tenure Cohort (Cols F to I)
+# Table B: Churn by Tenure Bracket (Cols F to I)
 ws_dash.merge_cells('F9:I9')
 sec_b = ws_dash['F9']
-sec_b.value = "2. COHORT RETENTION & CHURN DECAY"
+sec_b.value = "2. TENURE BRACKET CHURN DECAY (SNAPSHOT)"
 sec_b.font = Font(name='Segoe UI', size=10, bold=True, color='FFFFFF')
 sec_b.fill = PatternFill(start_color='1E293B', end_color='1E293B', fill_type='solid')
 
@@ -240,7 +240,7 @@ ws_dash.add_chart(chart_contract, "A18")
 chart_cohort = BarChart()
 chart_cohort.type = "col"
 chart_cohort.style = 11
-chart_cohort.title = "Churn Decay Across Tenure Cohorts"
+chart_cohort.title = "Churn Decay Across Tenure Brackets (Snapshot)"
 chart_cohort.y_axis.title = "Churn %"
 chart_cohort.x_axis.title = "Tenure Bracket"
 chart_cohort.y_axis.number_format = '0%'
@@ -320,7 +320,7 @@ ws_cohort.views.sheetView[0].showGridLines = True
 
 ws_cohort.merge_cells('A1:J2')
 c_banner = ws_cohort['A1']
-c_banner.value = "📊 DETAILED TENURE COHORT RETENTION MATRIX"
+c_banner.value = "📊 DETAILED TENURE BRACKET RETENTION & CHURN MATRIX (SNAPSHOT)"
 c_banner.font = Font(name='Segoe UI', size=14, bold=True, color='FFFFFF')
 c_banner.fill = PatternFill(start_color=HEADER_BG, end_color=HEADER_BG, fill_type='solid')
 c_banner.alignment = Alignment(horizontal='center', vertical='center')
@@ -390,6 +390,14 @@ for c_i in range(1, 11):
     cell.font = Font(name='Segoe UI', size=9.5, bold=True)
     cell.border = thin_border
     cell.fill = PatternFill(start_color='E2E8F0', end_color='E2E8F0', fill_type='solid')
+
+# Methodological Footnote
+ws_cohort.merge_cells('A13:J13')
+fn_cell = ws_cohort['A13']
+fn_cell.value = "📌 Methodological Note: Cross-sectional snapshot of 7,043 customer accounts. Active accounts are right-censored; tenure brackets represent account age distribution rather than longitudinal cohort tracking."
+fn_cell.font = Font(name='Segoe UI', size=8.5, italic=True, color='475569')
+fn_cell.fill = PatternFill(start_color='F8FAFC', end_color='F8FAFC', fill_type='solid')
+fn_cell.alignment = Alignment(horizontal='left', vertical='center')
 
 # Auto-width for Cohort sheet
 for col in ws_cohort.columns:

@@ -49,7 +49,7 @@ plt.close()
 print('Chart 1 complete.')
 
 # -------------------------------------------------------------
-# Chart 2: Cohort Tenure Retention & Churn Curve
+# Chart 2: Cross-Sectional Tenure Bracket Retention & Churn Curve
 # -------------------------------------------------------------
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6), facecolor='white')
 cohort_order = ['0-12 Mo', '13-24 Mo', '25-36 Mo', '37-48 Mo', '49-60 Mo', '61-72 Mo']
@@ -59,7 +59,7 @@ cohort_stats = df.groupby('Tenure_Cohort', observed=False).agg(
 ).reindex(cohort_order)
 
 bars = ax1.bar(cohort_stats.index, cohort_stats['Churn_Rate'] * 100, color='#E11D48', alpha=0.85, width=0.55, edgecolor='#9F1239')
-ax1.set_title('Churn Rate by Tenure Cohort (% Churned)', fontsize=12, fontweight='bold', color='#1E293B')
+ax1.set_title('Churn Rate by Tenure Bracket (% Churned in Snapshot)', fontsize=12, fontweight='bold', color='#1E293B')
 ax1.set_ylabel('Churn Rate (%)', fontsize=11, fontweight='bold', color='#334155')
 ax1.set_ylim(0, 60)
 for bar, total in zip(bars, cohort_stats['Total']):
@@ -70,19 +70,19 @@ ax1.axhline(avg_churn, color='#64748B', linestyle='--', linewidth=1.5, label=f'A
 ax1.legend(loc='upper right', frameon=True)
 ax1.grid(axis='y', linestyle=':', alpha=0.6)
 
-# Line plot: Cumulative Retention Survival by month (1 to 72)
+# Line plot: Cross-Sectional Tenure Distribution (% accounts active at or beyond month m)
 tenure_survival = []
 for m in range(1, 73):
     sub = df[df['tenure'] >= m]
     tenure_survival.append(len(sub) / len(df) * 100)
 
-ax2.plot(range(1, 73), tenure_survival, color='#0D9488', linewidth=3, label='Account Retention Curve')
+ax2.plot(range(1, 73), tenure_survival, color='#0D9488', linewidth=3, label='Snapshot Tenure Profile')
 ax2.axvspan(1, 12, color='#FEE2E2', alpha=0.5, label='High-Risk Onboarding Window (Mo 1-12)')
-ax2.set_title('Customer Retention Survival Curve (Months 1 to 72)', fontsize=12, fontweight='bold', color='#1E293B')
-ax2.set_xlabel('Tenure (Months Active)', fontsize=11, fontweight='bold', color='#334155')
-ax2.set_ylabel('% of Accounts Active', fontsize=11, fontweight='bold', color='#334155')
+ax2.set_title('Cross-Sectional Tenure Profile (% Accounts with Tenure >= Month m)', fontsize=11, fontweight='bold', color='#1E293B')
+ax2.set_xlabel('Tenure (Months Active in Snapshot)', fontsize=11, fontweight='bold', color='#334155')
+ax2.set_ylabel('% of Accounts (Snapshot)', fontsize=11, fontweight='bold', color='#334155')
 ax2.set_ylim(0, 105)
-ax2.text(14, 75, '47.4% Churn in Mo 1-12\nAccounts stabilize after Mo 24', color='#9F1239', fontweight='bold', fontsize=10, bbox=dict(boxstyle='round,pad=0.4', facecolor='white', edgecolor='#E11D48'))
+ax2.text(14, 75, '47.4% Churn in Mo 0-12\nAttrition stabilizes in >24 Mo accounts', color='#9F1239', fontweight='bold', fontsize=10, bbox=dict(boxstyle='round,pad=0.4', facecolor='white', edgecolor='#E11D48'))
 ax2.legend(loc='lower left', frameon=True)
 ax2.grid(axis='both', linestyle=':', alpha=0.6)
 
@@ -259,7 +259,7 @@ p1.grid(axis='y', linestyle=':', alpha=0.5)
 p2.plot(range(len(cohort_stats)), cohort_stats['Churn_Rate'] * 100, marker='o', linewidth=2.5, color='#BE123C', markersize=7)
 p2.set_xticks(range(len(cohort_stats)))
 p2.set_xticklabels(cohort_stats.index, fontsize=9.5, fontweight='bold')
-p2.set_title('2. Churn Decay by Tenure Cohort', fontsize=11, fontweight='bold', color='#1E293B')
+p2.set_title('2. Churn Decay by Tenure Bracket (Snapshot)', fontsize=11, fontweight='bold', color='#1E293B')
 p2.set_ylabel('Churn Rate (%)', fontsize=10, fontweight='bold')
 p2.set_ylim(0, 55)
 for i, v in enumerate(cohort_stats['Churn_Rate'] * 100):

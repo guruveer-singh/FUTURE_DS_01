@@ -21,11 +21,17 @@ This comprehensive analytics engagement evaluated **7,043 subscriber accounts** 
 |          7,043           |          26.54%          |       $139,130.85        |     $1,669,570.20      |
 |  (5,174 Retained Accounts)  |  (Benchmark: < 5-8% SaaS)| (30.5% of Portfolio MRR) |   (High Reinvestment)  |
 +--------------------------+--------------------------+--------------------------+------------------------+
-|   YEAR-1 RETENTION RATE  |  AVG ACTIVE TENURE (MOS) |   MEDIAN YEAR-1 LTV ($)  |  MATURE COHORT LTV ($) |
+|   YEAR-1 RETENTION RATE  |  OBSERVED MEAN TENURE    |   YEAR-1 AVG CHARGES ($) |  MATURE COHORT AVG ($) |
 |          52.56%          |        32.4 Months       |          $275.23         |       $5,180.67        |
-|  (47.4% First-Year Drop) | (Stabilizes at Month 24) |  (High CAC Payback Risk) |  (18.8x Year-1 Value)  |
+|  (47.4% First-Year Drop) | (Right-censored Base)    |  (High CAC Payback Risk) |  (18.8x Year-1 Value)  |
 +--------------------------+--------------------------+--------------------------+------------------------+
 ```
+
+> [!NOTE]
+> **Methodological Context & Data Limitations**  
+> This dataset is a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time, with tenure ranging from 0 to 72 months.  
+> - **Cross-Sectional vs. Longitudinal:** The 12-month tenure groupings represent *cross-sectional lifecycle brackets* (comparing accounts of differing ages in the current snapshot) rather than a longitudinal cohort panel following a single signup cohort across consecutive calendar months.  
+> - **Right-Censored Active Accounts:** For currently retained subscribers, tenure is right-censored because their subscriptions are ongoing. The 32.4-month average represents the *mean observed tenure* of accounts in this snapshot, not completed actuarial customer lifetimes.
 
 ### 🎯 Key Strategic Takeaways
 1. **The $120.8K/Month Contract Gap:** Month-to-month contracts suffer from an alarming **42.71% churn rate** and account for **86.86% of all lost recurring revenue** ($120.8K/mo). Annual and two-year commitments reduce churn by up to **15x** (11.27% and 2.83% respectively).
@@ -35,11 +41,11 @@ This comprehensive analytics engagement evaluated **7,043 subscriber accounts** 
 
 ---
 
-## 2. Cohort Analysis & The Onboarding Cliff
+## 2. Cross-Sectional Tenure Bracket Analysis & The Onboarding Cliff
 
-An analysis of customer tenure segmented into 12-month cohort brackets reveals an acute retention drop-off during the first year of subscription, followed by strong survival stabilization once customers reach mature lifecycle stages.
+An analysis of customer tenure segmented into 12-month lifecycle brackets reveals an acute attrition concentration during the first year of subscription, followed by strong survival stabilization once customers reach mature lifecycle stages.
 
-### Cohort Retention Matrix
+### Tenure Bracket Retention & Churn Matrix (Cross-Sectional Snapshot)
 
 | Tenure Cohort Bracket | Total Accounts | Retained | Churned | Churn Rate (%) | Retention Rate (%) | Avg Monthly Fee | Cumulative Revenue (CLV) | Lost MRR ($/mo) | Risk Classification |
 |---|---|---|---|---|---|---|---|---|---|
@@ -53,7 +59,7 @@ An analysis of customer tenure segmented into 12-month cohort brackets reveals a
 
 ### Analytical Findings
 - **The Month 0–12 Onboarding Deficit:** Nearly 1 out of every 2 subscribers drops off before their first anniversary. This indicates that onboarding friction, unrealized initial product value ("time-to-value"), or buyer's remorse occurs early.
-- **Compounding Cohort Value:** Average Customer Lifetime Value expands exponentially from **$275.23** in Year 1 to **$5,180.67** in Year 6. Each percentage point of retention achieved in Year 1 compounds into massive long-term cash flow.
+- **Compounding Tenure Value:** Average observed cumulative customer spend (TotalCharges) expands from **$275.23** in Year 1 to **$5,180.67** in Year 6. Each percentage point of retention achieved in Year 1 compounds into massive long-term cash flow.
 
 ---
 

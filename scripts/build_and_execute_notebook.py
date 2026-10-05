@@ -1,10 +1,20 @@
 import json
+import sys
+import io
+import base64
+import ast
+import traceback
+import pandas as pd
+import numpy as np
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 notebook = {
     "cells": [],
     "metadata": {
         "kernelspec": {
-            "display_name": "Python 3",
+            "display_name": "Python 3 (ipykernel)",
             "language": "python",
             "name": "python3"
         },
@@ -38,26 +48,33 @@ def add_code(code):
         "source": [line + "\n" for line in code.strip().split("\n")]
     })
 
-# Title & Metadata
+# ==============================================================================
+# 0. Title & Executive Problem Statement
+# ==============================================================================
 add_md("""# 📊 Customer Retention & Churn Analysis (Future Interns - Task 2)
 ### By Future Interns Data Science & Analytics Program
-**Author:** Data Science Intern  
+**Author:** Guruveer Singh  
 **Project:** Task 2 - Customer Retention & Churn Analysis  
-**Dataset:** Telecom / Subscription Customer Dataset (7,043 customer accounts)  
-**Deliverable:** End-to-end analytics notebook, cohort analysis, churn drivers, and SaaS retention strategy
+**Dataset Scope:** Telecom & Subscription Customer Dataset (7,043 customer accounts)  
+**Deliverable:** End-to-end analytics notebook, cross-sectional cohort analysis, churn drivers, and SaaS retention strategy
 
 ---
 
 ## 🔍 Executive Problem Statement
-Customer churn directly impacts company valuation, customer acquisition cost (CAC) payback periods, and recurring cash flow. In subscription models, acquiring a new customer is **5x to 7x more expensive** than retaining an existing one.
+Customer churn directly impacts company valuation, customer acquisition cost (CAC) payback periods, and recurring cash flow. In subscription models, acquiring a replacement customer is **5x to 7x more expensive** than retaining an existing account.
 
 This analysis provides leadership and product teams with actionable answers to four foundational business questions:
 1. **Why are customers leaving the platform?**
-2. **Which customer segments are most likely to churn?**
-3. **How long do customers typically stay active before dropping off?**
-4. **What high-ROI interventions can maximize customer retention and preserve recurring revenue?**""")
+2. **Which customer segments and contract commitments are most likely to churn?**
+3. **Where in the customer lifecycle does attrition concentrate?**
+4. **What high-ROI interventions can maximize customer retention and preserve recurring revenue?**
 
-# Imports
+> **📌 Methodological Note: Cross-Sectional Snapshot vs. Longitudinal Cohort Tracking**  
+> This dataset represents a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time, with tenure ranging from 0 to 72 months. While it does not track a single monthly cohort longitudinally across 72 consecutive calendar months, grouping accounts into tenure lifecycle brackets (`0-12 Mo`, `13-24 Mo`, etc.) provides a valuable cross-sectional proxy for tenure-related churn propensity. Active subscriber tenures are right-censored (their subscription journey is ongoing), so the observed average tenure (32.4 months) reflects the mean age of accounts in this snapshot rather than completed actuarial customer lifetimes.""")
+
+# ==============================================================================
+# Cell 1: Imports
+# ==============================================================================
 add_code("""import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,9 +86,11 @@ warnings.filterwarnings('ignore')
 plt.style.use('seaborn-v0_8-whitegrid' if 'seaborn-v0_8-whitegrid' in plt.style.available else 'default')
 plt.rcParams['font.sans-serif'] = 'Arial'
 plt.rcParams['figure.dpi'] = 120
-print('Core libraries imported successfully!')""")
+print('Core analytics and visualization libraries imported successfully!')""")
 
-# Section 1
+# ==============================================================================
+# 1. Data Ingestion & Preprocessing
+# ==============================================================================
 add_md("""---
 ## 1. Data Ingestion, Cleaning & Preprocessing
 We load the raw customer dataset containing 7,043 subscriber records across 21 demographic, service, contract, and billing attributes.""")
@@ -85,24 +104,26 @@ add_code("""# Data Hygiene: Check missing values and spaces in numeric columns
 print("Missing values per column:")
 print(df.isnull().sum()[df.isnull().sum() > 0])
 
-# TotalCharges contains whitespace strings for tenure = 0 customers
+# TotalCharges contains whitespace strings for tenure = 0 customers (new signups)
 spaces_count = (df['TotalCharges'] == ' ').sum()
 print(f"Whitespace strings in TotalCharges: {spaces_count}")
 
 # Convert TotalCharges to numeric, filling newly acquired accounts (tenure=0) with 0.0
 df['TotalCharges'] = pd.to_numeric(df['TotalCharges'].replace(' ', np.nan)).fillna(0.0)
 
-# Binary churn indicator
+# Binary churn indicator for vectorized statistics
 df['Churn_Num'] = (df['Churn'] == 'Yes').astype(int)
 
-# Confirm types
+# Confirm types and readiness
 print(f"TotalCharges dtype: {df['TotalCharges'].dtype}")
-print(f"Cleaned dataset ready with 0 null values.")""")
+print(f"Cleaned dataset ready with {len(df):,} accounts and 0 null values.")""")
 
-# Section 2
+# ==============================================================================
+# 2. Baseline Churn Rate & Revenue Exposure
+# ==============================================================================
 add_md("""---
 ## 2. Baseline Churn Rate & Revenue Exposure (MRR / ARR)
-Here we evaluate the top-line retention health of the business and quantify the exact financial impact of churned accounts.""")
+We evaluate the top-line retention health of the business and quantify the exact recurring financial impact of churned accounts.""")
 
 add_code("""total_customers = len(df)
 churned_customers = df['Churn_Num'].sum()
@@ -114,21 +135,26 @@ churned_mrr = df[df['Churn_Num'] == 1]['MonthlyCharges'].sum()
 retained_mrr = total_mrr - churned_mrr
 churned_arr = churned_mrr * 12
 
-print("="*55)
-print("             EXECUTIVE KPI SNAPSHOT")
-print("="*55)
+print("="*60)
+print("             EXECUTIVE RETENTION KPI SCORECARD")
+print("="*60)
 print(f"Total Subscriber Base:        {total_customers:,} accounts")
 print(f"Retained Accounts:            {retained_customers:,} ({1 - churn_rate:.2%})")
 print(f"Churned Accounts:             {churned_customers:,} ({churn_rate:.2%})")
 print(f"Total Portfolio MRR:          ${total_mrr:,.2f} / month")
 print(f"Lost Recurring Revenue (MRR): ${churned_mrr:,.2f} / month ({churned_mrr/total_mrr:.1%})")
 print(f"Annualized Run-Rate Loss:     ${churned_arr:,.2f} / year")
-print("="*55)""")
+print(f"Observed Mean Account Tenure: {df['tenure'].mean():.1f} months")
+print("="*60)""")
 
-# Section 3
+# ==============================================================================
+# 3. Tenure Bracket Cohort Analysis
+# ==============================================================================
 add_md("""---
-## 3. Cohort Analysis & Tenure Survival (The Onboarding Cliff)
-We examine retention across customer lifecycle stages by grouping tenure into 12-month cohort buckets (Years 1 through 6).""")
+## 3. Tenure Bracket Analysis & The Onboarding Cliff (Months 0–12)
+We examine retention across customer lifecycle stages by grouping tenure into 12-month lifecycle brackets (Years 1 through 6).
+
+*Note: In this cross-sectional snapshot, these brackets compare accounts of differing current ages rather than tracking a single historical signup cohort over calendar time.*""")
 
 add_code("""# Define 12-month tenure cohort bins
 bins = [0, 12, 24, 36, 48, 60, 72]
@@ -148,10 +174,10 @@ cohort_summary = df.groupby('Tenure_Cohort', observed=False).agg(
 cohort_summary['% of Total Churn'] = (cohort_summary['Churned_Accounts'] / churned_customers) * 100
 cohort_summary""")
 
-add_code("""# Visualize the First-Year Onboarding Cliff
+add_code("""# Visualize Churn Decay Across Cross-Sectional Tenure Brackets
 plt.figure(figsize=(10, 5))
 bars = plt.bar(cohort_summary.index, cohort_summary['Churn_Rate'] * 100, color='#E11D48', alpha=0.85, width=0.5)
-plt.title('Customer Churn Decay Across Tenure Cohorts', fontsize=13, fontweight='bold', pad=12)
+plt.title('Customer Churn Rate by Tenure Bracket (Cross-Sectional Snapshot)', fontsize=13, fontweight='bold', pad=12)
 plt.ylabel('Churn Rate (%)', fontsize=11, fontweight='bold')
 plt.ylim(0, 55)
 
@@ -159,12 +185,14 @@ for bar in bars:
     y = bar.get_height()
     plt.text(bar.get_x() + bar.get_width()/2, y + 1.2, f'{y:.1f}%', ha='center', fontweight='bold', color='#9F1239')
 
-plt.axhline(churn_rate * 100, color='#64748B', linestyle='--', label=f'Baseline Churn ({churn_rate:.1%})')
+plt.axhline(churn_rate * 100, color='#64748B', linestyle='--', label=f'Portfolio Baseline Churn ({churn_rate:.1%})')
 plt.legend(frameon=True)
 plt.tight_layout()
 plt.show()""")
 
-# Section 4
+# ==============================================================================
+# 4. Contract Commitment Analysis
+# ==============================================================================
 add_md("""---
 ## 4. Contract Commitment as the Primary Retention Anchor
 Contract type is the single strongest structural determinant of subscriber retention. Month-to-month contracts lack switching friction, while annual agreements lock in habits and commitment.""")
@@ -199,7 +227,9 @@ for i, v in enumerate(contract_perf['Lost_MRR'] / 1000):
 plt.tight_layout()
 plt.show()""")
 
-# Section 5
+# ==============================================================================
+# 5. Product Quality & The Fiber Optic Support Paradox
+# ==============================================================================
 add_md("""---
 ## 5. Product Quality & The Fiber Optic Support Paradox
 High-speed Fiber Optic represents the company's highest-priced core product ($91.50/mo vs $58.10/mo for DSL). Yet, Fiber Optic has a shocking **41.9% churn rate**.
@@ -218,7 +248,9 @@ fiber_analysis['Churn_Rate_%'] = (fiber_analysis['Churn_Rate'] * 100).round(1).a
 fiber_analysis['Retention_Rate_%'] = (fiber_analysis['Retention_Rate'] * 100).round(1).astype(str) + '%'
 fiber_analysis.sort_values(by='Churn_Rate', ascending=False)""")
 
-# Section 6
+# ==============================================================================
+# 6. Payment Channels & Involuntary Billing Friction
+# ==============================================================================
 add_md("""---
 ## 6. Payment Channels & Involuntary Billing Friction
 Manual payment methods create recurring monthly decision points and involuntary churn due to missed payments or billing fatigue.""")
@@ -233,7 +265,9 @@ add_code("""pay_analysis = df.groupby('PaymentMethod').agg(
 pay_analysis['Churn_Rate_%'] = (pay_analysis['Churn_Rate'] * 100).round(1).astype(str) + '%'
 pay_analysis""")
 
-# Section 7
+# ==============================================================================
+# 7. Customer Lifetime Value (CLV) Progression
+# ==============================================================================
 add_md("""---
 ## 7. Customer Lifetime Value (CLV) & Compounding Retention Economics
 Customer retention is the ultimate driver of cumulative customer value. Let us analyze how Customer Lifetime Value (Total Charges) expands across tenure tiers.""")
@@ -243,7 +277,9 @@ clv_cohort.columns = ['Avg_CLV_($)', 'Median_CLV_($)', 'Total_Cumulative_Revenue
 clv_cohort['LTV_Multiplier_vs_Yr1'] = clv_cohort['Avg_CLV_($)'] / clv_cohort['Avg_CLV_($)'].iloc[0]
 clv_cohort.round(2)""")
 
-# Section 8
+# ==============================================================================
+# 8. Customer Risk Scoring Model
+# ==============================================================================
 add_md("""---
 ## 8. Customer Risk Scoring Model (Rule-Based Health Scoring)
 We segment the active customer base (5,174 retained accounts) into predictive risk tiers:
@@ -276,7 +312,9 @@ active_risk = df[df['Churn_Num'] == 0].groupby('Risk_Tier').agg(
 active_risk['Share_of_Active_MRR'] = (active_risk['Total_MRR_At_Risk'] / active_risk['Total_MRR_At_Risk'].sum()) * 100
 active_risk.round(2)""")
 
-# Section 9
+# ==============================================================================
+# 9. ROI Simulation
+# ==============================================================================
 add_md("""---
 ## 9. ROI Simulation: Revenue Preserved via Targeted Retention
 What is the financial return of reducing churn by **5%**, **10%**, or **20%** through our strategic recommendations?""")
@@ -302,7 +340,9 @@ print("="*65)
 print(sim_df.to_string(index=False))
 print("="*65)""")
 
-# Section 10
+# ==============================================================================
+# 10. Strategic Recommendations
+# ==============================================================================
 add_md("""---
 ## 10. Strategic Recommendations & Retention Playbook for Leadership
 
@@ -312,7 +352,7 @@ add_md("""---
 - **Projected Impact:** Migrating just 20% of M2M subscribers to 1-year agreements preserves **~$24,000/mo ($288K ARR)**.
 
 ### 🛡️ 2. First 90 Days Onboarding Cadence
-- **The Problem:** **55.5% of total churn occurs in Months 1–12** (47.4% first-year churn rate).
+- **The Problem:** **55.5% of total churn occurs in Months 0–12** (47.4% first-year churn rate).
 - **Action:** Establish a dedicated Day 1-90 customer success journey with proactive setup calls, onboarding webinars, usage telemetry alerts, and Month-6 milestone loyalty bonuses.
 
 ### ⚡ 3. The Fiber Optic Support Bundle
@@ -323,8 +363,119 @@ add_md("""---
 - **The Problem:** Electronic Check users churn at **45.3%**, compared to **15.2%** for Auto-Credit Card and **16.7%** for Auto-Bank Transfer.
 - **Action:** Provide a **$5/month statement credit** for enrolling in Auto-Pay, removing manual payment friction and reducing involuntary churn.""")
 
-# Write out notebook
+# ==============================================================================
+# EXECUTION ENGINE: Execute all code cells and embed real outputs
+# ==============================================================================
+print('Beginning notebook execution...')
+exec_globals = {}
+exec_count = 1
+
+for idx, cell in enumerate(notebook['cells']):
+    if cell['cell_type'] != 'code':
+        continue
+    
+    code_text = "".join(cell['source'])
+    print(f'Executing code cell {exec_count}...')
+    
+    cell['execution_count'] = exec_count
+    cell['outputs'] = []
+    
+    # Intercept stdout
+    old_stdout = sys.stdout
+    captured_stdout = io.StringIO()
+    sys.stdout = captured_stdout
+    
+    # Intercept matplotlib figures
+    captured_figs = []
+    def custom_show(*args, **kwargs):
+        for fig_num in plt.get_fignums():
+            fig = plt.figure(fig_num)
+            buf = io.BytesIO()
+            fig.savefig(buf, format='png', bbox_inches='tight', dpi=120)
+            buf.seek(0)
+            b64_img = base64.b64encode(buf.read()).decode('utf-8')
+            captured_figs.append(b64_img)
+        plt.close('all')
+    
+    orig_show = plt.show
+    plt.show = custom_show
+    
+    eval_result = None
+    try:
+        # Check if last statement is an expression
+        tree = ast.parse(code_text)
+        last_is_expr = False
+        if tree.body and isinstance(tree.body[-1], ast.Expr):
+            last_is_expr = True
+            exec_code = ast.unparse(tree.body[:-1])
+            eval_expr = ast.unparse(tree.body[-1].value)
+            
+            if exec_code.strip():
+                exec(exec_code, exec_globals)
+            eval_result = eval(eval_expr, exec_globals)
+        else:
+            exec(code_text, exec_globals)
+    except Exception as e:
+        sys.stdout = old_stdout
+        print(f"Error in cell {exec_count}: {e}")
+        traceback.print_exc()
+        raise e
+    finally:
+        sys.stdout = old_stdout
+        plt.show = orig_show
+    
+    # Any remaining unshown plots?
+    for fig_num in plt.get_fignums():
+        fig = plt.figure(fig_num)
+        buf = io.BytesIO()
+        fig.savefig(buf, format='png', bbox_inches='tight', dpi=120)
+        buf.seek(0)
+        b64_img = base64.b64encode(buf.read()).decode('utf-8')
+        captured_figs.append(b64_img)
+    plt.close('all')
+    
+    # Collect stdout
+    stdout_val = captured_stdout.getvalue()
+    if stdout_val:
+        cell['outputs'].append({
+            "name": "stdout",
+            "output_type": "stream",
+            "text": [line + "\n" for line in stdout_val.splitlines()]
+        })
+    
+    # Collect figures
+    for fig_b64 in captured_figs:
+        cell['outputs'].append({
+            "data": {
+                "image/png": fig_b64,
+                "text/plain": ["<Figure size ...>"]
+            },
+            "metadata": {},
+            "output_type": "display_data"
+        })
+    
+    # Collect expression results (DataFrames, etc.)
+    if eval_result is not None:
+        data_dict = {}
+        if isinstance(eval_result, pd.DataFrame):
+            data_dict["text/html"] = [eval_result.to_html()]
+            data_dict["text/plain"] = [repr(eval_result)]
+        elif isinstance(eval_result, pd.Series):
+            data_dict["text/plain"] = [repr(eval_result)]
+        else:
+            data_dict["text/plain"] = [repr(eval_result)]
+        
+        cell['outputs'].append({
+            "data": data_dict,
+            "execution_count": exec_count,
+            "metadata": {},
+            "output_type": "execute_result"
+        })
+    
+    exec_count += 1
+
+# Write out completed executed notebook
 with open('customer_retention_and_churn_analysis.ipynb', 'w', encoding='utf-8') as f:
     json.dump(notebook, f, indent=2)
 
-print('Notebook customer_retention_and_churn_analysis.ipynb built successfully!')
+print('Executed customer_retention_and_churn_analysis.ipynb with all outputs saved!')

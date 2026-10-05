@@ -33,8 +33,11 @@
 | **Monthly Revenue Lost (MRR)** | **$139,130.85 / mo** | 30.5% of total portfolio recurring revenue ($456.1K baseline MRR) |
 | **Annualized Run-Rate Loss** | **$1,669,570.20 / yr** | High revenue leakage eroding customer acquisition ROI |
 | **Year-1 Retention Rate** | **52.56%** | **47.4% churn in months 0–12** (The Onboarding Cliff) |
-| **Average Customer Lifetime** | **32.4 Months** | Accounts surviving past Month 24 retain at 85%+ |
-| **Customer Lifetime Value (CLV)** | **$275 (Yr 1) -> $5,180 (Yr 6)** | Mature retained accounts generate **18.8x higher lifetime value** |
+| **Observed Mean Tenure** | **32.4 Months** | Snapshot subscriber base (right-censored) |
+| **Cumulative Spend (TotalCharges)** | **$275 (Yr 1) -> $5,180 (Yr 6)** | Mature retained accounts generate **18.8x higher cumulative spend** |
+
+> **📌 Methodological Note: Cross-Sectional Snapshot vs. Longitudinal Cohort Tracking**  
+> This dataset represents a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time, with tenure ranging from 0 to 72 months. Grouping accounts into 12-month tenure lifecycle brackets (`0-12 Mo`, `13-24 Mo`, etc.) provides a cross-sectional proxy for tenure-related attrition propensity. Active subscriber tenures are right-censored, so the observed average tenure (32.4 months) reflects the mean age of accounts in this snapshot rather than completed actuarial customer lifetimes.
 
 ---
 
@@ -47,10 +50,10 @@
 
 ---
 
-### 2. The Onboarding Cliff (Tenure Cohort Survival)
+### 2. The Onboarding Cliff (Tenure Bracket Retention & Churn Decay)
 ![Cohort Tenure Retention Survival](visualizations/retention/02_cohort_tenure_survival.png)
 - **The Month 0–12 Cliff:** **55.5% of all churn (1,037 accounts)** occurs in the first 12 months.
-- **Survival Stabilization:** Once customers reach Month 24, churn drops to **21.6%**, and drops further to **6.6%** for Month 61–72. Proactive onboarding in Days 1–90 is the highest leverage retention initiative.
+- **Attrition Stabilization:** For accounts active past Month 24, snapshot churn drops to **21.6%**, and drops further to **6.6%** for Month 61–72 accounts. Proactive onboarding in Days 1–90 is the highest leverage retention initiative.
 
 ---
 

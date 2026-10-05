@@ -39,9 +39,11 @@
 - **Portfolio Churn Rate:** **26.54%** (SaaS target benchmark: < 5–8%)
 - **Monthly Revenue Lost (MRR):** **$139,130.85 / mo** (30.5% of total portfolio MRR)
 - **Annualized Run-Rate Loss:** **$1,669,570.20 / year**
-- **Year-1 Retention Rate:** **52.56%** (**47.4% churn in first 12 months** - The Onboarding Cliff)
-- **Average Customer Lifetime:** **32.4 Months**
-- **Mature Customer Lifetime Value (CLV):** **$5,180.67** (18.8x higher than Year-1 CLV of $275)
+- **Year-1 Retention Rate:** **52.56%** (**47.4% churn in months 0–12** - The Onboarding Cliff)
+- **Observed Mean Account Tenure:** **32.4 Months** (Snapshot base; right-censored active accounts)
+- **Mature Cumulative Spend (TotalCharges):** **$5,180.67** (18.8x higher than Year-1 charges of $275)
+
+> **📌 Methodological Note:** This analysis evaluates a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time. Grouping accounts into 12-month tenure lifecycle brackets provides a cross-sectional proxy for attrition propensity. Active accounts are right-censored; 32.4 months represents observed mean tenure rather than completed actuarial customer lifetimes.
 
 ### 📈 Task 2 Visual Analytics & Strategic Findings
 
@@ -49,9 +51,9 @@
 ![Churn Overview & Revenue Exposure](visualizations/retention/01_churn_overview_and_revenue.png)
 - **Key Finding:** Churned accounts account for **30.5% of total portfolio revenue** ($139.1K/mo), indicating that churn disproportionately affects higher-priced tiers ($74.44/mo churned vs. $61.26/mo retained).
 
-#### 2. The Onboarding Cliff (Cohort Tenure Retention)
+#### 2. The Onboarding Cliff (Tenure Bracket Retention & Churn Decay)
 ![Cohort Tenure Retention Survival](visualizations/retention/02_cohort_tenure_survival.png)
-- **Key Finding:** **55.5% of all churn occurs in months 0–12** (47.4% first-year churn). Accounts surviving past Month 24 retain at 85%+. Proactive onboarding in Days 1–90 is the highest leverage retention initiative.
+- **Key Finding:** **55.5% of all churn occurs in months 0–12** (47.4% first-year churn). Accounts active past Month 24 experience attrition rates dropping to 21.6% and down to 6.6% for Month 61–72. Proactive onboarding in Days 1–90 is the highest leverage retention initiative.
 
 #### 3. Contract Commitment as the Strongest Retention Anchor
 ![Contract Risk Breakdown](visualizations/retention/03_contract_risk_breakdown.png)
