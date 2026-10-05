@@ -48,6 +48,8 @@ add_md("""# 📊 Marketing Funnel & Conversion Performance Analysis (Future Inte
 **Scope:** 244,178 Inbound Visitors | 15,000 Captured Leads | 1,819 Won Customers ($10.87M Revenue)  
 **Deliverable:** End-to-end analytics notebook, funnel stage drop-off audit, channel unit economics (CAC / ROAS), and growth strategy
 
+> **📌 Data Provenance & Synthetic Data Disclosure:** As permitted by Future Interns project guidelines, this engagement evaluates a synthetically modeled B2B multi-channel growth and conversion dataset (`data/marketing_funnel_summary.csv` and `data/marketing_funnel_leads.csv`). The dataset is engineered to mirror realistic B2B SaaS conversion dynamics, stage drop-offs, sales cycle velocities, and unit economics. All metrics, rates, and sensitivity models are computed directly from these structured data tables.
+
 ---
 
 ## 🔍 Executive Problem Statement
@@ -218,7 +220,9 @@ velocity_summary""")
 # Cell 10: Financial Simulation
 add_md("""---
 ## 7. Financial Sensitivity Model: Revenue Impact of Conversion Lifts
-What is the revenue impact if we improve MQL-to-SQL conversion by **+2%**, **+5%**, or **+10%** through automated qualification and faster SDR outreach?""")
+What is the incremental revenue impact if we improve MQL-to-SQL conversion by **+2%**, **+5%**, or **+10%** through automated qualification and faster SDR outreach?
+
+> **Note on Methodology:** Incremental pipeline revenue is modeled based on the portfolio's observed average won deal value ($5,975.06). In high-growth SaaS environments, incremental revenue carries substantial valuation leverage; however, because this cross-sectional dataset models contract deal revenue rather than establishing a multi-year recurring SaaS subscription basis, projections reflect scenario-based sensitivity benchmarks rather than an audit-grade ARR valuation.""")
 
 add_code("""current_sqls = total_sqls
 current_customers = total_customers
@@ -259,7 +263,7 @@ add_md("""---
 - **Action:** Launch a formal Partner Channel with a 20% first-year revenue share, co-hosted webinars, and agency certifications.
 
 ### 💰 3. Shift Budget from Generic PPC to Account-Based LinkedIn
-- **The Issue:** Paid Search consumes 34% of spend ($218.7K) at an 8.5x ROAS, while LinkedIn Ads targets enterprise accounts yielding $8.5K average deal sizes.
+- **The Issue:** Paid Search consumes 38.4% of spend ($218.7K of $569.1K) at an 8.46x ROAS, while LinkedIn Ads targets enterprise accounts yielding $8.5K average deal sizes.
 - **Action:** Reallocate $50K from broad PPC search terms into LinkedIn ABM campaigns targeting 500+ employee tech and healthcare enterprises.
 
 ### ⚡ 4. Compress Enterprise Sales Cycles (52 Days to Close)

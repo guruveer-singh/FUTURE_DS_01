@@ -5,6 +5,9 @@
 **Dataset Scope:** 244,178 Inbound Visitors | 15,000 Leads | 1,819 Closed Won Customers ($10.87M Revenue)  
 **Deliverables:** [Excel Dashboard](Marketing_Funnel_Dashboard.xlsx) | [Python Notebook](marketing_funnel_and_conversion_analysis.ipynb) | [Visualizations](visualizations/funnel/)
 
+> [!NOTE]
+> **Data Provenance & Synthetic Data Disclosure:** As permitted by the Future Interns program guidelines, the dataset analyzed in Task 3 ([`data/marketing_funnel_summary.csv`](data/marketing_funnel_summary.csv) and [`data/marketing_funnel_leads.csv`](data/marketing_funnel_leads.csv)) is a **synthetically modeled B2B multi-channel growth and conversion dataset**. It was engineered to reflect realistic enterprise B2B SaaS pipeline distributions (244,178 website visitors across 6 channels, 15,000 lead records, mid-funnel qualification friction, company tiers, and sales cycles from 18 to 52 days). All metrics, unit economics (CAC, ROAS), conversion rates, and financial sensitivities are calculated directly from these structured data files.
+
 ---
 
 ## 1. Executive Summary & Topline Scorecard
@@ -134,7 +137,7 @@ Analyzing the timeline from initial lead generation to closed contract reveals c
 
 Simulating incremental improvements in the primary bottleneck (MQL-to-SQL conversion rate) demonstrates tremendous revenue leverage:
 
-| MQL-to-SQL Conversion Lift | Additional SQLs Added | Additional Won Customers | Incremental Pipeline Revenue Generated | Enterprise Value Impact (8x ARR Multiple) |
+| MQL-to-SQL Conversion Lift | Additional SQLs Added | Additional Won Customers | Incremental Pipeline Revenue Generated | Illustrative Enterprise Value Impact (8x Revenue Multiple Scenario) |
 |---|---|---|---|---|
 | **+2% Lift** | +210 SQLs | **+70 Customers** | **+$418,254.20** | **+$3,346,033** |
 | **+5% Lift** | +526 SQLs | **+177 Customers** | **+$1,057,585.62** | **+$8,460,684** |
@@ -142,6 +145,8 @@ Simulating incremental improvements in the primary bottleneck (MQL-to-SQL conver
 | **+10% Lift** | +1,053 SQLs | **+355 Customers** | **+$2,121,146.30** | **+$16,969,170** |
 
 Plugging the mid-funnel leak by just **+5%** injects over **$1.05 Million in incremental revenue** without increasing marketing advertising spend by a single dollar.
+
+> **📌 Methodological Note on Valuation Sensitivity:** This simulation models incremental pipeline contract revenue using the portfolio's observed average won deal value ($5,975.06). The 8x multiplier is an *illustrative revenue-multiple scenario* frequently cited in B2B growth and software company benchmarking. Because this dataset tracks closed deal values without establishing contract term durations or a recurring SaaS subscription schedule, it does not constitute a formal Annual Recurring Revenue (ARR) base. These enterprise valuation estimates should therefore be interpreted as scenario-based sensitivity benchmarks rather than an audit-grade ARR valuation appraisal.
 
 ---
 

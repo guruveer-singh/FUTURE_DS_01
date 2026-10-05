@@ -27,6 +27,8 @@
 > **Executive Business Objective:**  
 > In digital marketing, SaaS, and high-growth startups, driving top-of-funnel traffic is meaningless if leads fail to convert into paying customers. This task evaluates **244,178 inbound website sessions**, **15,000 captured leads**, and **1,819 closed won customers** ($10.87M in pipeline revenue) to diagnose conversion bottlenecks, evaluate multi-channel unit economics (CAC / ROAS), and formulate high-ROI growth interventions.
 
+> **📌 Data Provenance & Synthetic Data Disclosure:** As permitted by Future Interns project guidelines, Task 3 evaluates a synthetically modeled B2B multi-channel acquisition dataset engineered to mirror realistic enterprise SaaS conversion dynamics, stage drop-offs, sales cycle velocities, and unit economics. All metrics and sensitivity scenarios are computed directly from these structured data tables.
+
 ### 📑 Task 3 Core Deliverables
 - **[Marketing_Funnel_Dashboard.xlsx](Marketing_Funnel_Dashboard.xlsx)**: 4-tab client-ready Excel dashboard featuring symmetrical KPI cards, native Excel charts, full funnel stage progression tables, campaign ROI breakdowns, and 5,000 lead records with autofilters.
 - **[funnel_analysis_report.md](funnel_analysis_report.md)**: Comprehensive executive advisory report detailing stage drop-offs, channel attribution, unit economics (CAC / ROAS), and a 30-60-90 day optimization roadmap.

@@ -32,6 +32,7 @@
 - **Mid-Funnel Bottleneck:** 48.85% drop-off between MQL and SQL (5,145 leads lost) before demo booking due to SDR qualification latency and lack of interactive product tours.
 - **Channel Asymmetry:** Referral/Partner delivers 27.99% lead-to-customer conversion at $78.61 CAC (91.37x ROAS), whereas Paid Search consumes 38.4% of spend ($218.7K of $569.1K) at 8.46x ROAS ($534.69 CAC). LinkedIn Ads drives $3.47M in revenue across 407 customers ($619.25 CAC, 13.77x ROAS).
 - **Sales Velocity:** Overall mean cycle velocity is 33.5 days. Enterprise accounts ($8.5K+ ACV) require 52.1 days vs 18.4 days for Startups.
+- **Data Provenance & Methodological Caveats:** Synthetically modeled B2B dataset (permitted under Future Interns guidelines). The 8x revenue multiplier is an illustrative scenario benchmark on incremental deal revenue, not an ARR valuation appraisal.
 
 ---
 
