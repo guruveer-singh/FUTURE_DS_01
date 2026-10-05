@@ -16,10 +16,10 @@
 | Deliverable | File / Path | Key Details |
 |---|---|---|
 | **Executive Excel Dashboard** | **[`Customer_Retention_Dashboard.xlsx`](Customer_Retention_Dashboard.xlsx)** | Formatted 4-tab workbook featuring symmetrical KPI cards, native Excel charts, tenure bracket retention matrix, customer churn risk scoring, and 7,043 cleaned records with autofilters. |
-| **Business Analysis & Advisory Report** | **[`retention_analysis_report.md`](retention_analysis_report.md)** | Strategic advisory report for founders and product teams detailing tenure-based attrition decay, root-cause drivers, LTV economics, and a 30-60-90 day retention roadmap. |
+| **Business Analysis & Advisory Report** | **[`retention_analysis_report.md`](retention_analysis_report.md)** | Strategic advisory report for founders and product teams detailing tenure-based attrition decay, root-cause drivers, cumulative spend economics, and a 30-60-90 day retention roadmap. |
 | **Jupyter Analytics Notebook** | **[`customer_retention_and_churn_analysis.ipynb`](customer_retention_and_churn_analysis.ipynb)** | End-to-end reproducible Python notebook covering data cleaning, EDA, cross-sectional tenure bracket curves, risk modeling, and financial simulations. |
 | **Cleaned Customer Dataset** | **[`data/telco_customer_churn_cleaned.csv`](data/telco_customer_churn_cleaned.csv)** | Preprocessed dataset with whitespace handling, binary churn flags, tenure cohorts, and predictive churn risk tiers. |
-| **High-Resolution Visualizations** | **[`visualizations/retention/`](visualizations/retention/)** | 7 publication-grade 300 DPI visualizations covering churn overview, cohort decay, contract risk, support paradox, payment friction, and CLV progression. |
+| **High-Resolution Visualizations** | **[`visualizations/retention/`](visualizations/retention/)** | 7 publication-grade 300 DPI visualizations covering churn overview, cohort decay, contract risk, support paradox, payment friction, and cumulative spend progression. |
 | **LinkedIn Showcase Post** | **[`task2_linkedin_post.txt`](task2_linkedin_post.txt)** | Ready-to-publish professional LinkedIn post summarizing problem scope, insights, and technical tools. |
 
 ---
@@ -82,10 +82,10 @@
 
 ---
 
-### 6. Customer Lifetime Value (CLV) Progression
-![Customer Lifetime Value Progression](visualizations/retention/06_clv_and_tenure_progression.png)
-- **Exponential Expansion:** CLV expands from **$275.23** in Year 1 to **$5,180.67** in Year 6 (an 18.8x multiple).
-- **Cumulative Contribution:** The 61–72 month cohort accounts for **$7.29M (45.4%) of all historical revenue**, confirming that retention compounds customer value.
+### 6. Historical Cumulative Spend Progression by Tenure Bracket
+![Historical Cumulative Spend Progression](visualizations/retention/06_clv_and_tenure_progression.png)
+- **Cumulative Revenue Expansion:** Average observed cumulative charges (`TotalCharges`) expand from **$275.23** in Year 1 to **$5,180.67** in Year 6 (an 18.8x multiple in observed cumulative spend to date).
+- **Cumulative Contribution:** The 61–72 month cohort accounts for **$7.29M (45.4%) of all historical revenue to date**, confirming that retention compounds customer value.
 
 ---
 
@@ -123,7 +123,7 @@ flowchart LR
 - **Microsoft Excel:** Executive dashboard design, KPI formatting, native Excel Bar & Column charts, cohort tables, and risk segmentation.
 - **Python 3.12:** Data hygiene, type conversion, pandas grouping, numpy aggregation, and statistical testing.
 - **Matplotlib & Seaborn:** Publication-quality 300 DPI visualization exports with unified design aesthetics.
-- **Business Strategy:** SaaS retention economics, tenure bracket retention decay, CLV modeling, and sensitivity analysis.
+- **Business Strategy:** SaaS retention economics, tenure bracket retention decay, cumulative spend modeling, and sensitivity analysis.
 
 ---
 *Developed as part of the Future Interns Data Science & Analytics Program.*

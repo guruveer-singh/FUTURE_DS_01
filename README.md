@@ -130,9 +130,9 @@
 ![Payment Method Friction](visualizations/retention/05_payment_method_friction.png)
 - **Key Finding:** Electronic Check users churn at **45.3%**, while automated Credit Card and Bank Transfer churn at 15.2% and 16.7%. Auto-pay eliminates monthly invoice friction and involuntary billing lapses.
 
-#### 6. Customer Lifetime Value (CLV) Progression
-![Customer Lifetime Value Progression](visualizations/retention/06_clv_and_tenure_progression.png)
-- **Key Finding:** Cumulative customer value expands by **18.8x** from Year 1 ($275) to Year 6 ($5,180). Month 61–72 subscribers contribute **$7.29M (45.4%) of all historical revenue**.
+#### 6. Historical Cumulative Spend Progression by Tenure Bracket
+![Historical Cumulative Spend Progression](visualizations/retention/06_clv_and_tenure_progression.png)
+- **Key Finding:** Average observed cumulative charges (`TotalCharges`) expand by **18.8x** from Year 1 ($275.23) to Year 6 ($5,180.67). Month 61–72 subscribers contribute **$7.29M (45.4%) of all historical revenue to date**.
 
 #### 7. Executive Retention Dashboard Summary
 ![Executive Retention Dashboard](visualizations/retention/07_executive_retention_dashboard_summary.png)

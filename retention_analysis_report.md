@@ -47,7 +47,7 @@ An analysis of customer tenure segmented into 12-month lifecycle brackets reveal
 
 ### Tenure Bracket Retention & Churn Matrix (Cross-Sectional Snapshot)
 
-| Tenure Cohort Bracket | Total Accounts | Retained | Churned | Churn Rate (%) | Retention Rate (%) | Avg Monthly Fee | Cumulative Revenue (CLV) | Lost MRR ($/mo) | Risk Classification |
+| Tenure Cohort Bracket | Total Accounts | Retained | Churned | Churn Rate (%) | Retention Rate (%) | Avg Monthly Fee | Cumulative Revenue (TotalCharges) | Lost MRR ($/mo) | Risk Classification |
 |---|---|---|---|---|---|---|---|---|---|
 | **0–12 Months (Yr 1)** | 2,186 | 1,149 | 1,037 | **47.44%** | 52.56% | **$56.10** | $601,651.90 | **$68,954.25** | 🚨 Critical (Cliff) |
 | **13–24 Months (Yr 2)** | 1,024 | 730 | 294 | **28.71%** | 71.29% | **$61.36** | $1,153,287.70 | **$23,081.65** | ⚠️ High (Contract Expiry) |
@@ -188,9 +188,9 @@ flowchart TD
 | Deliverable | File Path / Format | Description |
 |---|---|---|
 | **Executive Excel Dashboard** | [`Customer_Retention_Dashboard.xlsx`](Customer_Retention_Dashboard.xlsx) | Professional 4-tab workbook featuring KPI summary cards, native dynamic Excel charts, cohort retention tables, customer risk scoring, and 7,043 cleaned records with autofilters. |
-| **Jupyter Analytics Notebook** | [`customer_retention_and_churn_analysis.ipynb`](customer_retention_and_churn_analysis.ipynb) | Reproducible Python notebook covering data validation, statistical cohort analysis, churn modeling, CLV progression, and ROI simulations. |
+| **Jupyter Analytics Notebook** | [`customer_retention_and_churn_analysis.ipynb`](customer_retention_and_churn_analysis.ipynb) | Reproducible Python notebook covering data validation, statistical cohort analysis, churn modeling, cumulative spend progression, and ROI simulations. |
 | **Cleaned Customer Dataset** | [`data/telco_customer_churn_cleaned.csv`](data/telco_customer_churn_cleaned.csv) | Preprocessed 7,043 customer records with imputed whitespace handling, binary churn encoding, tenure cohort bucketing, and churn risk scoring. |
-| **High-Resolution Visualizations** | [`visualizations/retention/`](visualizations/retention/) | 7 publication-ready 300 DPI graphics covering churn overview, cohort decay, contract risk, support paradox, payment friction, CLV, and executive dashboards. |
+| **High-Resolution Visualizations** | [`visualizations/retention/`](visualizations/retention/) | 7 publication-ready 300 DPI graphics covering churn overview, cohort decay, contract risk, support paradox, payment friction, cumulative spend progression, and executive dashboards. |
 | **LinkedIn Showcase Post** | [`task2_linkedin_post.txt`](task2_linkedin_post.txt) | Pre-written professional showcase post highlighting methodology, discoveries, and business impact for LinkedIn. |
 
 ---

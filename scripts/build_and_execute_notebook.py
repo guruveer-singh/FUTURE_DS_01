@@ -266,16 +266,18 @@ pay_analysis['Churn_Rate_%'] = (pay_analysis['Churn_Rate'] * 100).round(1).astyp
 pay_analysis""")
 
 # ==============================================================================
-# 7. Customer Lifetime Value (CLV) Progression
+# 7. Historical Cumulative Charges Progression by Tenure Bracket
 # ==============================================================================
 add_md("""---
-## 7. Customer Lifetime Value (CLV) & Compounding Retention Economics
-Customer retention is the ultimate driver of cumulative customer value. Let us analyze how Customer Lifetime Value (Total Charges) expands across tenure tiers.""")
+## 7. Historical Cumulative Spend & Compounding Retention Economics
+Customer retention is the ultimate driver of cumulative customer revenue. Analyzing historical cumulative charges (`TotalCharges`) across tenure brackets illustrates how subscriber value compounds over time.
 
-add_code("""clv_cohort = df.groupby('Tenure_Cohort', observed=False)['TotalCharges'].agg(['mean', 'median', 'sum'])
-clv_cohort.columns = ['Avg_CLV_($)', 'Median_CLV_($)', 'Total_Cumulative_Revenue_($)']
-clv_cohort['LTV_Multiplier_vs_Yr1'] = clv_cohort['Avg_CLV_($)'] / clv_cohort['Avg_CLV_($)'].iloc[0]
-clv_cohort.round(2)""")
+> **Methodological Note on Cumulative Spend vs. Lifetime Value:** Because this dataset is a cross-sectional snapshot with right-censored active accounts, `TotalCharges` represents historical cumulative charges billed to date within each tenure bracket, rather than completed actuarial Customer Lifetime Value (CLV).""")
+
+add_code("""spend_cohort = df.groupby('Tenure_Cohort', observed=False)['TotalCharges'].agg(['mean', 'median', 'sum'])
+spend_cohort.columns = ['Avg_Cumulative_Spend_($)', 'Median_Cumulative_Spend_($)', 'Total_Cumulative_Revenue_($)']
+spend_cohort['Spend_Multiplier_vs_Yr1'] = spend_cohort['Avg_Cumulative_Spend_($)'] / spend_cohort['Avg_Cumulative_Spend_($)'].iloc[0]
+spend_cohort.round(2)""")
 
 # ==============================================================================
 # 8. Customer Risk Scoring Model

@@ -45,11 +45,11 @@
    - Tab 3: `Churn Risk Scoring` - Active portfolio segmentation (High, Medium, Low Risk) with playbooks for $105.8K/mo MRR at risk.
    - Tab 4: `Cleaned Customer Data` - All 7,043 subscriber records with autofilters, currency formatting, and risk tags.
 2. **Business Advisory Report (`retention_analysis_report.md`)**:
-   - Comprehensive executive advisory report covering tenure-based attrition decay, root-cause drivers (contract duration, Fiber Optic support paradox, payment friction), CLV economics, 4-pillar retention engine, and a 30-60-90 day operational roadmap.
+   - Comprehensive executive advisory report covering tenure-based attrition decay, root-cause drivers (contract duration, Fiber Optic support paradox, payment friction), cumulative spend economics, 4-pillar retention engine, and a 30-60-90 day operational roadmap.
 3. **Jupyter Analytics Notebook (`customer_retention_and_churn_analysis.ipynb`)**:
    - Fully executed Python notebook with verified native cell execution metadata, EDA, cross-sectional tenure bracket modeling, multivariate risk factors, and financial ROI sensitivity simulations.
 4. **Visualizations (`visualizations/retention/`)**:
-   - 7 publication-ready 300 DPI graphics covering churn overview, tenure bracket profile, contract risk breakdown, fiber optic support paradox, payment channel friction, CLV expansion, and executive summary dashboard.
+   - 7 publication-ready 300 DPI graphics covering churn overview, tenure bracket profile, contract risk breakdown, fiber optic support paradox, payment channel friction, cumulative spend expansion, and executive summary dashboard.
 5. **Documentation & Social Showcase**:
    - `TASK2_README.md`: Stand-alone documentation for Task 2.
    - `task2_linkedin_post.txt`: Pre-written professional showcase post for LinkedIn tagging Future Interns.
@@ -62,7 +62,7 @@
 - **The First-Year Cliff:** 55.48% of all churn (1,037 accounts) occurs in the first 12 months (47.44% Yr-1 churn rate). Retention stabilizes after Month 24.
 - **The Fiber Optic Support Paradox:** Premium Fiber Optic users ($91.50/mo) churn at 41.89%, but bundling Tech Support slashes churn to 22.63% (a 54% reduction).
 - **Payment Friction:** Electronic Check churns at 45.29% vs 15.24% for Auto-Credit Card.
-- **Compounding CLV:** Lifetime value expands by 18.8x from Year 1 ($275.23) to Year 6 ($5,180.67).
+- **Compounding Cumulative Spend:** Observed cumulative charges (TotalCharges) expand by 18.8x from Year 1 ($275.23) to Year 6 ($5,180.67).
 
 ---
 

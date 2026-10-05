@@ -205,7 +205,7 @@ plt.close()
 print('Chart 5 complete.')
 
 # -------------------------------------------------------------
-# Chart 6: Customer Lifetime Value (CLV) Progression by Tenure
+# Chart 6: Historical Cumulative Charges Progression by Tenure Bracket
 # -------------------------------------------------------------
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6), facecolor='white')
 
@@ -216,7 +216,7 @@ clv_stats = df.groupby('Tenure_Cohort', observed=False).agg(
 ).reindex(cohort_order)
 
 bars_clv = ax1.bar(clv_stats.index, clv_stats['Avg_Total'], color='#0F766E', width=0.55, edgecolor='#134E4A')
-ax1.set_title('Average Customer Lifetime Value (CLV) by Tenure', fontsize=12, fontweight='bold', color='#1E293B')
+ax1.set_title('Average Historical Cumulative Charges (TotalCharges) by Tenure', fontsize=11, fontweight='bold', color='#1E293B')
 ax1.set_ylabel('Average Total Charges ($)', fontsize=11, fontweight='bold')
 ax1.set_ylim(0, 6000)
 for bar in bars_clv:
@@ -225,7 +225,7 @@ for bar in bars_clv:
 ax1.grid(axis='y', linestyle=':', alpha=0.6)
 
 bars_rev = ax2.bar(clv_stats.index, clv_stats['Total_Rev'] / 1e6, color='#2563EB', width=0.55, edgecolor='#1D4ED8')
-ax2.set_title('Cumulative Revenue Contribution by Tenure Cohort', fontsize=12, fontweight='bold', color='#1E293B')
+ax2.set_title('Cumulative Revenue Contribution by Tenure Bracket', fontsize=12, fontweight='bold', color='#1E293B')
 ax2.set_ylabel('Total Revenue ($ Millions)', fontsize=11, fontweight='bold')
 ax2.set_ylim(0, 8.5)
 total_cum_rev = clv_stats['Total_Rev'].sum() / 1e6
@@ -235,7 +235,7 @@ for bar in bars_rev:
     ax2.text(bar.get_x() + bar.get_width()/2.0, yval + 0.15, f'${yval:.2f}M\n({pct:.1f}%)', ha='center', va='bottom', fontsize=9.5, fontweight='bold', color='#1D4ED8')
 ax2.grid(axis='y', linestyle=':', alpha=0.6)
 
-plt.suptitle('THE POWER OF RETENTION: 5+ YEAR CUSTOMERS GENERATE 18.8x HIGHER CLV THAN YEAR 1', fontsize=14, fontweight='bold', color='#0F172A', y=1.02)
+plt.suptitle('THE POWER OF RETENTION: 5+ YEAR ACCOUNTS ACCUMULATE 18.8x HIGHER REVENUE THAN YEAR 1', fontsize=13, fontweight='bold', color='#0F172A', y=1.02)
 plt.tight_layout()
 plt.savefig(f'{out_dir}/06_clv_and_tenure_progression.png', dpi=300, bbox_inches='tight')
 plt.close()

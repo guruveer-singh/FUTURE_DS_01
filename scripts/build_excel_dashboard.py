@@ -145,7 +145,7 @@ sec_b.value = "2. TENURE BRACKET CHURN DECAY (SNAPSHOT)"
 sec_b.font = Font(name='Segoe UI', size=10, bold=True, color='FFFFFF')
 sec_b.fill = PatternFill(start_color='1E293B', end_color='1E293B', fill_type='solid')
 
-headers_b = ["Tenure Bracket", "Customers", "Churn Rate", "Avg LTV ($)"]
+headers_b = ["Tenure Bracket", "Customers", "Churn Rate", "Avg Spend ($)"]
 for col_idx, h in enumerate(headers_b, start=6):
     c = ws_dash.cell(row=10, column=col_idx, value=h)
     c.font = Font(name='Segoe UI', size=9, bold=True, color='FFFFFF')
@@ -327,7 +327,7 @@ c_banner.alignment = Alignment(horizontal='center', vertical='center')
 
 cohort_matrix_headers = [
     "Tenure Cohort", "Total Customers", "Active / Retained", "Churned Accounts",
-    "Retention Rate", "Churn Rate", "Avg Monthly Fee", "Total Revenue (LTV)", "Lost MRR", "Risk Status"
+    "Retention Rate", "Churn Rate", "Avg Monthly Fee", "Total Cumulative Revenue", "Lost MRR", "Risk Status"
 ]
 for col_idx, h in enumerate(cohort_matrix_headers, start=1):
     c = ws_cohort.cell(row=4, column=col_idx, value=h)
