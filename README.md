@@ -1,120 +1,161 @@
-# 📊 Future Interns - Task 1: Retail Sales Data Analysis & Executive Dashboard
+# 💼 Future Interns - Data Science & Analytics Portfolio
 
-[![Excel](https://img.shields.io/badge/Excel-Dashboard_Ready-217346.svg?logo=microsoft-excel&logoColor=white)](Retail_Sales_Dashboard.xlsx)
+[![Excel](https://img.shields.io/badge/Excel-Dashboard_Ready-217346.svg?logo=microsoft-excel&logoColor=white)](Customer_Retention_Dashboard.xlsx)
 [![PowerBI](https://img.shields.io/badge/Power_BI-PBIX_Model-F2C811.svg?logo=power-bi&logoColor=black)](FUTURE_DS_01.pbix)
-[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](sales_analysis_and_dashboard.ipynb)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?logo=jupyter&logoColor=white)](sales_analysis_and_dashboard.ipynb)
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](customer_retention_and_churn_analysis.ipynb)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626.svg?logo=jupyter&logoColor=white)](customer_retention_and_churn_analysis.ipynb)
 [![Status](https://img.shields.io/badge/Status-Client--Ready_Production-success.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
-> **Internship Task 1 Deliverable for Future Interns**  
+> **Future Interns Data Science & Analytics Program (2026)**  
+> Production-grade data analytics, executive dashboard engineering, cohort retention modeling, and strategic business intelligence portfolio.
+
+---
+
+## 📌 Portfolio Project Quick Navigation
+
+| Project | Domain | Core Tools | Primary Deliverable | Status |
+|---|---|---|---|---|
+| **[Task 2: Customer Retention & Churn Analysis](#-task-2-customer-retention--churn-analysis)** | Subscription & SaaS Analytics | Excel, Python, Pandas, Matplotlib | [Excel Dashboard](Customer_Retention_Dashboard.xlsx) \| [Report](retention_analysis_report.md) \| [Notebook](customer_retention_and_churn_analysis.ipynb) | ✅ **Complete** |
+| **[Task 1: Retail Sales Analysis & Executive Dashboard](#-task-1-retail-sales-data-analysis--executive-dashboard)** | E-Commerce & Retail BI | Excel, Power BI, Python, RFM | [Excel Dashboard](Retail_Sales_Dashboard.xlsx) \| [PBIX Model](FUTURE_DS_01.pbix) \| [Report](analysis_report.md) | ✅ **Complete** |
+
+---
+
+# 🚀 Task 2: Customer Retention & Churn Analysis
+
+> **Executive Business Objective:**  
+> In subscription and recurring revenue models, acquiring a replacement customer costs **5x to 7x more** than retaining an existing one. This task analyzes **7,043 subscriber accounts** ($456.1K baseline MRR) to understand why customers churn, identify high-risk segments, model customer cohort survival over 72 months, and formulate high-ROI retention interventions.
+
+### 📑 Task 2 Core Deliverables
+- **[Customer_Retention_Dashboard.xlsx](Customer_Retention_Dashboard.xlsx)**: 4-tab client-ready Excel dashboard featuring symmetrical KPI cards, native Excel charts, cohort retention tables, customer churn risk scoring, and 7,043 cleaned records with autofilters.
+- **[retention_analysis_report.md](retention_analysis_report.md)**: In-depth executive advisory report detailing cohort decay, root-cause drivers, LTV economics, and a 30-60-90 day retention roadmap.
+- **[customer_retention_and_churn_analysis.ipynb](customer_retention_and_churn_analysis.ipynb)**: Reproducible Python notebook covering data cleaning, EDA, cohort survival curves, risk modeling, and financial simulations.
+- **[TASK2_README.md](TASK2_README.md)**: Dedicated stand-alone documentation for Task 2.
+- **[task2_linkedin_post.txt](task2_linkedin_post.txt)**: Pre-formatted professional LinkedIn showcase post.
+- **[visualizations/retention/](visualizations/retention/)**: 7 high-resolution (300 DPI) publication-ready charts.
+
+### 🎯 Task 2 Executive KPI Scorecard
+- **Total Subscriber Base:** 7,043 accounts (5,174 Retained | 1,869 Churned)
+- **Portfolio Churn Rate:** **26.54%** (SaaS target benchmark: < 5–8%)
+- **Monthly Revenue Lost (MRR):** **$139,130.85 / mo** (30.5% of total portfolio MRR)
+- **Annualized Run-Rate Loss:** **$1,669,570.20 / year**
+- **Year-1 Retention Rate:** **52.56%** (**47.4% churn in first 12 months** - The Onboarding Cliff)
+- **Average Customer Lifetime:** **32.4 Months**
+- **Mature Customer Lifetime Value (CLV):** **$5,180.67** (18.8x higher than Year-1 CLV of $275)
+
+### 📈 Task 2 Visual Analytics & Strategic Findings
+
+#### 1. Portfolio Churn Overview & Revenue Exposure
+![Churn Overview & Revenue Exposure](visualizations/retention/01_churn_overview_and_revenue.png)
+- **Key Finding:** Churned accounts account for **30.5% of total portfolio revenue** ($139.1K/mo), indicating that churn disproportionately affects higher-priced tiers ($74.44/mo churned vs. $61.26/mo retained).
+
+#### 2. The Onboarding Cliff (Cohort Tenure Retention)
+![Cohort Tenure Retention Survival](visualizations/retention/02_cohort_tenure_survival.png)
+- **Key Finding:** **55.5% of all churn occurs in months 0–12** (47.4% first-year churn). Accounts surviving past Month 24 retain at 85%+. Proactive onboarding in Days 1–90 is the highest leverage retention initiative.
+
+#### 3. Contract Commitment as the Strongest Retention Anchor
+![Contract Risk Breakdown](visualizations/retention/03_contract_risk_breakdown.png)
+- **Key Finding:** Month-to-month contracts have a **42.7% churn rate** and drive **86.9% ($120.8K/mo) of lost MRR**. In contrast, 1-Year plans churn at 11.3% and 2-Year plans at only 2.8% (a **15x risk reduction**).
+
+#### 4. The Fiber Optic Support Paradox
+![Fiber Optic Support Paradox](visualizations/retention/04_fiber_optic_service_paradox.png)
+- **Key Finding:** Premium Fiber Optic users ($91.50/mo) churn at **41.9%** vs. 19.0% for DSL. However, bundling Tech Support and Online Security cuts churn by **54% (down to 22.6%)**. Unbundled technical support damages customer satisfaction.
+
+#### 5. Payment Channel Friction & Involuntary Churn
+![Payment Method Friction](visualizations/retention/05_payment_method_friction.png)
+- **Key Finding:** Electronic Check users churn at **45.3%**, while automated Credit Card and Bank Transfer churn at 15.2% and 16.7%. Auto-pay eliminates monthly invoice friction and involuntary billing lapses.
+
+#### 6. Customer Lifetime Value (CLV) Progression
+![Customer Lifetime Value Progression](visualizations/retention/06_clv_and_tenure_progression.png)
+- **Key Finding:** Cumulative customer value expands by **18.8x** from Year 1 ($275) to Year 6 ($5,180). Month 61–72 subscribers contribute **$7.29M (45.4%) of all historical revenue**.
+
+#### 7. Executive Retention Dashboard Summary
+![Executive Retention Dashboard](visualizations/retention/07_executive_retention_dashboard_summary.png)
+
+### 💡 Task 2 Strategic Retention Playbook
+1. **Contract Migration Campaign:** Offer a 15% annual discount or 2 months free to migrate Month-to-Month accounts. Converting 20% saves **~$24,000/mo ($288K ARR)**.
+2. **Day 1–90 Structured Onboarding:** Deploy automated telemetry alerts and proactive customer success check-ins to defeat the 47.4% Year-1 churn cliff.
+3. **Mandatory Fiber Support Bundling:** Bundle 24/7 Priority Tech Support directly into base Fiber Optic plans, capturing an immediate 54% churn reduction.
+4. **Auto-Pay Conversion Incentive:** Offer a $5/month statement credit for enrolling in Auto-Pay, slashing manual billing drop-offs.
+
+---
+
+# 📊 Task 1: Retail Sales Data Analysis & Executive Dashboard
+
+> **Executive Business Objective:**  
 > An end-to-end data analytics and business intelligence project analyzing **540,000+ retail sales transactions** ($10.67M gross revenue) to answer core business questions on revenue trends, top-selling products, regional profitability, and strategic growth opportunities.
 
----
+### 📑 Task 1 Core Deliverables
+- **[Retail_Sales_Dashboard.xlsx](Retail_Sales_Dashboard.xlsx)**: Client-ready visual Excel dashboard with formatted KPI cards, native Excel charts (Monthly Trend, Top Products, Geo Share, Order Tiers), and strategic takeaways.
+- **[FUTURE_DS_01.pbix](FUTURE_DS_01.pbix)**: Power BI project file pre-loaded with the complete retail transaction data model.
+- **[analysis_report.md](analysis_report.md)**: Comprehensive markdown business report detailing findings, Pareto concentration, and growth recommendations.
+- **[sales_analysis_and_dashboard.ipynb](sales_analysis_and_dashboard.ipynb)**: End-to-end reproducible Python notebook covering data cleaning, EDA, KPI engineering, and statistical analysis.
+- **[linkedin_post.txt](linkedin_post.txt)**: Submission text ready to share on LinkedIn, tagging Future Interns.
 
-## 📑 Core Project Deliverables
+### 🎯 Task 1 Executive KPI Highlights
+- **Total Gross Revenue:** **$10,666,684.54** (530,104 cleaned transactions)
+- **Total Completed Orders:** **19,960** unique invoice orders
+- **Active Customer Base:** **4,338** customers (Repeat purchase rate of 65.4%)
+- **Average Order Value (AOV):** **$534.40** (Wholesale B2B orders: >$2,500)
+- **Product Catalog:** **3,922 SKUs** (Top 19.8% generate 80% of revenue - Pareto Principle)
+- **Global Footprint:** **38 Countries** (84.6% UK / 15.4% International export markets)
 
-| Deliverable | File | Description |
-|---|---|---|
-| **Executive Excel Dashboard** | **[Retail_Sales_Dashboard.xlsx](Retail_Sales_Dashboard.xlsx)** | Client-ready visual Excel dashboard with formatted KPI cards, native Excel charts (Monthly Trend, Top Products, Geo Share, Order Tiers), and strategic takeaways. |
-| **Power BI Model** | **[FUTURE_DS_01.pbix](FUTURE_DS_01.pbix)** | Power BI project file pre-loaded with the complete retail transaction data model. |
-| **Analysis & Advisory Report** | **[analysis_report.md](analysis_report.md)** | Comprehensive markdown business report detailing findings, Pareto concentration, and growth recommendations. |
-| **Jupyter Analytics Notebook** | **[sales_analysis_and_dashboard.ipynb](sales_analysis_and_dashboard.ipynb)** | End-to-end reproducible Python notebook covering data cleaning, EDA, KPI engineering, and statistical analysis. |
-| **LinkedIn Showcase Post** | **[linkedin_post.txt](linkedin_post.txt)** | Submission text ready to share on LinkedIn, tagging Future Interns. |
-
----
-
-## 🎯 Executive KPI Highlights
-
-| Metric | Value | Key Business Context |
-|---|---|---|
-| **Total Gross Revenue** | **$10,666,684.54** | Validated across 530,104 non-cancelled transactions |
-| **Total Completed Orders** | **19,960** | Unique invoice orders across 13 months |
-| **Active Customer Base** | **4,338** | Repeat purchase rate of 65.4% |
-| **Average Order Value (AOV)** | **$534.40** | Median retail basket: ~$150-$300; Wholesale B2B: >$2,500 |
-| **Total Product Catalog** | **3,922 SKUs** | Top 19.8% generate 80% of revenue (Pareto Principle) |
-| **Global Market Footprint** | **38 Countries** | 84.6% United Kingdom / 15.4% International export markets |
+### 📈 Task 1 Visual Analytics & Key Findings
+- **Q4 Holiday Seasonality:** Revenue peaked at **$1.51M in November 2011** (+98.2% MoM) driven by holiday shopping.
+- **Pareto Catalog Concentration:** Top 19.8% of products drive 80% of revenue; top items include *DOTCOM POSTAGE* ($206.2k) and *REGENCY CAKESTAND* ($174.5k).
+- **International Market Expansion:** International orders have a **3.2x higher AOV** than domestic UK retail orders.
+- **Customer RFM Segments:** Identified 628 high-value customers ($1.45M revenue) at risk (>90 days inactive).
 
 ---
 
-## 📈 Visual Analytics & Key Findings
-
-### 1. Monthly Revenue & Holiday Seasonality
-![Monthly Revenue Trend](visualizations/01_monthly_revenue_trend.png)
-- **Key Finding**: Clear exponential surge during Q4 holiday shopping. Revenue climbed from **$582k in April** to an all-time peak of **$1.51M in November 2011** (+98.2% MoM).
-- **Business Action**: Establish supplier inventory buffers and lock packaging contracts by **August** to avoid peak season stockouts.
-
----
-
-### 2. Top 10 Bestselling Products
-![Top 10 Products](visualizations/02_top_10_products_revenue.png)
-- **Key Finding**: Top product drivers include *DOTCOM POSTAGE* ($206.2k), *REGENCY CAKESTAND 3 TIER* ($174.5k), and *WHITE HANGING HEART T-LIGHT HOLDER* ($106.3k).
-- **Business Action**: High postage revenue indicates an opportunity to launch tiered free-shipping loyalty thresholds (e.g., "Free shipping on orders over $75").
-
----
-
-### 3. Pareto 80/20 Catalog Concentration
-![Pareto Analysis](visualizations/05_pareto_analysis.png)
-- **Key Finding**: The top **19.8% of products (776 SKUs)** drive **80.0% of total revenue**. The bottom 80% of the catalog forms a long tail tying up storage costs.
-- **Business Action**: Adopt ABC Inventory Classification. Prioritize warehouse placement and just-in-time stock for Class-A items, and run clearance bundles on zero-velocity SKUs.
-
----
-
-### 4. International Market Expansion
-![Revenue by Country](visualizations/03_revenue_by_country.png)
-- **Key Finding**: Outside the UK, the Netherlands ($285.4k), EIRE ($283.5k), Germany ($228.9k), and France ($209.7k) are the strongest revenue generators.
-- **Business Action**: International orders exhibit **3.2x higher AOV** than domestic orders due to bulk wholesale buying. Launch dedicated localized EU wholesale portals.
-
----
-
-### 5. Customer RFM Segmentation
-![RFM Segments](visualizations/07_rfm_customer_segments.png)
-- **Key Finding**: 
-  - **Champions & Loyalists (38.2%)**: Drive >60% of total sales.
-  - **At Risk / High Value (14.5%)**: 628 high-spending customers have not ordered in >90 days ($1.45M revenue at risk).
-- **Business Action**: Implement automated 60-day and 90-day win-back nurture sequences with personalized VIP incentives.
-
----
-
-### 6. Master Executive Infographic Summary
-![Master Executive Dashboard](visualizations/08_executive_dashboard_summary.png)
-
----
-
-## 🗂️ Project Directory Structure
+## 🗂️ Complete Repository Directory Structure
 
 ```text
 FUTURE_DS_01/
-├── Retail_Sales_Dashboard.xlsx        # Client-ready visual Excel dashboard with native charts
-├── FUTURE_DS_01.pbix                  # Power BI report file with data model
-├── sales_analysis_and_dashboard.ipynb # Complete reproducible Jupyter Notebook
-├── analysis_report.md                 # Detailed Executive Business Intelligence Report
-├── linkedin_post.txt                  # Formatted LinkedIn showcase post
-├── task1.txt                          # Original assignment brief
+├── Customer_Retention_Dashboard.xlsx        # [Task 2] Visual Excel retention dashboard with native charts
+├── customer_retention_and_churn_analysis.ipynb # [Task 2] Reproducible Python cohort & churn notebook
+├── retention_analysis_report.md             # [Task 2] Comprehensive executive advisory report
+├── TASK2_README.md                          # [Task 2] Dedicated Task 2 documentation
+├── task2_linkedin_post.txt                  # [Task 2] LinkedIn showcase post
+├── task2.txt                                # [Task 2] Assignment brief
+├── Retail_Sales_Dashboard.xlsx              # [Task 1] Visual Excel sales dashboard
+├── FUTURE_DS_01.pbix                        # [Task 1] Power BI data model
+├── sales_analysis_and_dashboard.ipynb       # [Task 1] Jupyter sales analysis notebook
+├── analysis_report.md                       # [Task 1] Task 1 Executive BI report
+├── linkedin_post.txt                        # [Task 1] LinkedIn post
+├── PROJECT_SUMMARY_CONTEXT.md               # Portfolio context summary
+├── README.md                                # Master Portfolio Documentation
 ├── data/
-│   └── data.csv                       # Raw sales transaction dataset (541k+ rows)
-└── visualizations/                    # 300 DPI High-Resolution Visual Charts
-    ├── 01_monthly_revenue_trend.png
-    ├── 02_top_10_products_revenue.png
-    ├── 03_revenue_by_country.png
-    ├── 04_sales_heatmap_day_hour.png
-    ├── 05_pareto_analysis.png
-    ├── 06_order_value_distribution.png
-    ├── 07_rfm_customer_segments.png
-    └── 08_executive_dashboard_summary.png
+│   ├── data.csv                             # [Task 1] 540k+ retail transaction dataset
+│   ├── telco_customer_churn.csv             # [Task 2] Raw customer churn dataset
+│   └── telco_customer_churn_cleaned.csv     # [Task 2] Cleaned dataset with risk scoring
+├── scripts/                                 # Build automation scripts
+│   ├── build_excel_dashboard.py
+│   ├── build_jupyter_notebook.py
+│   └── create_charts.py
+└── visualizations/                          # 300 DPI High-Resolution Visualizations
+    ├── 01_monthly_revenue_trend.png         # [Task 1]
+    ├── 02_top_10_products_revenue.png       # [Task 1]
+    ├── 03_revenue_by_country.png            # [Task 1]
+    ├── 04_sales_heatmap_day_hour.png        # [Task 1]
+    ├── 05_pareto_analysis.png               # [Task 1]
+    ├── 06_order_value_distribution.png      # [Task 1]
+    ├── 07_rfm_customer_segments.png         # [Task 1]
+    ├── 08_executive_dashboard_summary.png   # [Task 1]
+    └── retention/                           # [Task 2] Customer Retention Visualizations
+        ├── 01_churn_overview_and_revenue.png
+        ├── 02_cohort_tenure_survival.png
+        ├── 03_contract_risk_breakdown.png
+        ├── 04_fiber_optic_service_paradox.png
+        ├── 05_payment_method_friction.png
+        ├── 06_clv_and_tenure_progression.png
+        └── 07_executive_retention_dashboard_summary.png
 ```
 
 ---
 
-## 💡 Strategic Executive Recommendations
-
-1. **Q4 Peak Inventory Readiness**: Lock suppliers and shipping rates by late August for top holiday SKUs.
-2. **Pareto Inventory Optimization**: Automate re-order triggers for top 20% revenue-generating items.
-3. **Cross-Border Wholesale Expansion**: Expand B2B fulfillment hubs in Netherlands, Germany, and France.
-4. **Automated RFM Retention Engine**: Implement automated email win-back workflows for 628 high-value at-risk shoppers.
-
----
-
 ## 👨‍💻 Author & Acknowledgements
-- **Program**: Future Interns Data Science Internship Program (Task 1)
-- **Tools**: Microsoft Excel, Power BI, Python, Pandas, Matplotlib, Seaborn
-- **LinkedIn Submission**: [Future Interns](https://www.linkedin.com/company/future-interns/)
+- **Program:** Future Interns Data Science & Analytics Internship (2026)
+- **Intern:** Guruveer Singh
+- **GitHub Repository:** [guruveer-singh/FUTURE_DS_01](https://github.com/guruveer-singh/FUTURE_DS_01)
+- **LinkedIn Submission:** [Future Interns](https://www.linkedin.com/company/future-interns/)
