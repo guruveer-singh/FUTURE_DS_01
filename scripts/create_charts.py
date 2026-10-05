@@ -88,7 +88,7 @@ ax2.grid(axis='both', linestyle=':', alpha=0.6)
 
 plt.suptitle('THE ONBOARDING CLIFF: 55.5% OF ALL CHURN OCCURS IN THE FIRST 12 MONTHS', fontsize=14, fontweight='bold', color='#0F172A', y=1.02)
 plt.tight_layout()
-plt.savefig(f'{out_dir}/02_cohort_tenure_survival.png', dpi=300, bbox_inches='tight')
+plt.savefig(f'{out_dir}/02_tenure_bracket_retention.png', dpi=300, bbox_inches='tight')
 plt.close()
 print('Chart 2 complete.')
 

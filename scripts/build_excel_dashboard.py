@@ -337,12 +337,12 @@ for col_idx, h in enumerate(cohort_matrix_headers, start=1):
     c.border = thin_border
 
 cohort_matrix_data = [
-    ["0-12 Months", 2186, 1149, 1037, 0.5256, 0.4744, 55.43, 601651.90, 75841.50, "Critical (Onboarding Cliff)"],
-    ["13-24 Months", 1024, 730, 294, 0.7129, 0.2871, 64.67, 1153287.70, 22271.75, "High (Contract Expiry 1)"],
-    ["25-36 Months", 832, 652, 180, 0.7837, 0.2163, 67.24, 1655845.80, 14592.10, "Moderate (Established)"],
-    ["37-48 Months", 762, 617, 145, 0.8097, 0.1903, 69.18, 2154534.55, 12056.40, "Moderate (Loyal)"],
-    ["49-60 Months", 832, 712, 120, 0.8558, 0.1442, 73.12, 3201646.30, 9374.85, "Low (Highly Retained)"],
-    ["61-72 Months", 1407, 1314, 93, 0.9339, 0.0661, 79.52, 7289202.45, 4994.25, "Minimal (VIP Super-Sticky)"]
+    ["0-12 Months", 2186, 1149, 1037, 0.5256, 0.4744, 56.10, 601651.90, 68954.25, "Critical (Onboarding Cliff)"],
+    ["13-24 Months", 1024, 730, 294, 0.7129, 0.2871, 61.36, 1153287.70, 23081.65, "High (Contract Expiry 1)"],
+    ["25-36 Months", 832, 652, 180, 0.7837, 0.2163, 65.58, 1655845.80, 15167.95, "Moderate (Established)"],
+    ["37-48 Months", 762, 617, 145, 0.8097, 0.1903, 66.32, 2154534.55, 12294.55, "Moderate (Loyal)"],
+    ["49-60 Months", 832, 712, 120, 0.8558, 0.1442, 70.55, 3201646.30, 10581.90, "Low (Highly Retained)"],
+    ["61-72 Months", 1407, 1314, 93, 0.9339, 0.0661, 75.95, 7289202.45, 9050.55, "Minimal (VIP Super-Sticky)"]
 ]
 
 for row_idx, row in enumerate(cohort_matrix_data, start=5):

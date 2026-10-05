@@ -11,16 +11,16 @@
 
 ### 1. Deliverables Completed
 1. **Executive Excel Dashboard (`Customer_Retention_Dashboard.xlsx`)**:
-   - Tab 1: `Executive Dashboard` - Dark slate header, 5 KPI cards (Base: 7,043, Churn: 26.54%, Lost MRR: $139,131, Yr-1 Ret: 52.56%, Avg Lifetime: 32.4 Mos), 3 native charts (Contract Churn, Cohort Decay, Payment Friction), and formatted strategic action plan.
-   - Tab 2: `Cohort Retention Table` - 12-month cohort survival table with formatting, retention/churn rates, cumulative revenue, and risk classification.
+   - Tab 1: `Executive Dashboard` - Dark slate header, 5 KPI cards (Base: 7,043, Churn: 26.54%, Lost MRR: $139,131, Yr-1 Ret: 52.56%, Observed Mean Tenure: 32.4 Mos), 3 native charts (Contract Churn, Tenure Bracket Decay, Payment Friction), and formatted strategic action plan.
+   - Tab 2: `Cohort Retention Table` - 12-month tenure bracket table with formatting, exact reconciled retention/churn rates, cumulative revenue, and risk classification.
    - Tab 3: `Churn Risk Scoring` - Active portfolio segmentation (High, Medium, Low Risk) with playbooks for $105.8K/mo MRR at risk.
    - Tab 4: `Cleaned Customer Data` - All 7,043 subscriber records with autofilters, currency formatting, and risk tags.
 2. **Business Advisory Report (`retention_analysis_report.md`)**:
-   - Comprehensive executive advisory report covering cohort decay, root-cause drivers (contract duration, Fiber Optic support paradox, payment friction), CLV economics, 4-pillar retention engine, and a 30-60-90 day operational roadmap.
+   - Comprehensive executive advisory report covering tenure-based attrition decay, root-cause drivers (contract duration, Fiber Optic support paradox, payment friction), CLV economics, 4-pillar retention engine, and a 30-60-90 day operational roadmap.
 3. **Jupyter Analytics Notebook (`customer_retention_and_churn_analysis.ipynb`)**:
-   - 24-cell reproducible Python notebook covering data validation, EDA, cohort survival modeling, multivariate risk factors, and financial ROI sensitivity simulations.
+   - Fully executed Python notebook with verified native cell execution metadata, EDA, cross-sectional tenure bracket modeling, multivariate risk factors, and financial ROI sensitivity simulations.
 4. **Visualizations (`visualizations/retention/`)**:
-   - 7 publication-ready 300 DPI graphics covering churn overview, tenure survival curve, contract risk breakdown, fiber optic support paradox, payment channel friction, CLV expansion, and executive summary dashboard.
+   - 7 publication-ready 300 DPI graphics covering churn overview, tenure bracket profile, contract risk breakdown, fiber optic support paradox, payment channel friction, CLV expansion, and executive summary dashboard.
 5. **Documentation & Social Showcase**:
    - `TASK2_README.md`: Stand-alone documentation for Task 2.
    - `task2_linkedin_post.txt`: Pre-written professional showcase post for LinkedIn tagging Future Interns.

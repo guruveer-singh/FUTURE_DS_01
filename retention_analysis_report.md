@@ -11,7 +11,7 @@
 
 In subscription and recurring revenue business models, customer retention is the single most critical driver of enterprise valuation, cash flow stability, and Customer Lifetime Value (CLV). Acquiring a replacement customer costs **5x to 7x more** than preserving an existing account.
 
-This comprehensive analytics engagement evaluated **7,043 subscriber accounts** to diagnose the root causes of churn, map cohort survival patterns, quantify financial exposure, and design an actionable retention playbook.
+This comprehensive analytics engagement evaluated **7,043 subscriber accounts** to diagnose the root causes of churn, map cross-sectional tenure retention patterns, quantify financial exposure, and design an actionable retention playbook.
 
 ```
 +---------------------------------------------------------------------------------------------------------+
@@ -35,7 +35,7 @@ This comprehensive analytics engagement evaluated **7,043 subscriber accounts** 
 
 ### 🎯 Key Strategic Takeaways
 1. **The $120.8K/Month Contract Gap:** Month-to-month contracts suffer from an alarming **42.71% churn rate** and account for **86.86% of all lost recurring revenue** ($120.8K/mo). Annual and two-year commitments reduce churn by up to **15x** (11.27% and 2.83% respectively).
-2. **The "First 12 Months" Onboarding Cliff:** Over **55.48% of all churn (1,037 accounts) occurs within the first year of tenure**. Customers who survive beyond Month 24 experience an 85%+ retention rate, proving that early customer onboarding is the primary battlefield.
+2. **The "First 12 Months" Onboarding Cliff:** Over **55.48% of all churn (1,037 accounts) occurs within the first year of tenure**. Customers who reach Month 25+ experience an 80%+ retention rate, proving that early customer onboarding is the primary battlefield.
 3. **The Premium Fiber Optic Paradox:** The company's highest-priced core product—Fiber Optic ($91.50/mo avg)—has the highest churn rate across the entire portfolio (**41.89%** vs. 18.96% for DSL). However, Fiber Optic subscribers who have **Tech Support & Online Security bundle** churn at only **22.63%**, demonstrating that unbundled support is severely damaging customer satisfaction.
 4. **Friction in Manual Payment Channels:** Subscribers paying via **Electronic Check churn at 45.29%**, compared to **15.24% for automated Credit Card** and **16.71% for automated Bank Transfer**. Eliminating manual payment friction presents an immediate win against involuntary churn.
 
@@ -43,18 +43,18 @@ This comprehensive analytics engagement evaluated **7,043 subscriber accounts** 
 
 ## 2. Cross-Sectional Tenure Bracket Analysis & The Onboarding Cliff
 
-An analysis of customer tenure segmented into 12-month lifecycle brackets reveals an acute attrition concentration during the first year of subscription, followed by strong survival stabilization once customers reach mature lifecycle stages.
+An analysis of customer tenure segmented into 12-month lifecycle brackets reveals an acute attrition concentration during the first year of subscription, followed by strong retention stabilization once customers reach mature lifecycle stages.
 
 ### Tenure Bracket Retention & Churn Matrix (Cross-Sectional Snapshot)
 
 | Tenure Cohort Bracket | Total Accounts | Retained | Churned | Churn Rate (%) | Retention Rate (%) | Avg Monthly Fee | Cumulative Revenue (CLV) | Lost MRR ($/mo) | Risk Classification |
 |---|---|---|---|---|---|---|---|---|---|
-| **0–12 Months (Yr 1)** | 2,186 | 1,149 | 1,037 | **47.44%** | 52.56% | $55.43 | $601,651.90 | $75,841.50 | 🚨 Critical (Cliff) |
-| **13–24 Months (Yr 2)** | 1,024 | 730 | 294 | **28.71%** | 71.29% | $64.67 | $1,153,287.70 | $22,271.75 | ⚠️ High (Contract Expiry) |
-| **25–36 Months (Yr 3)** | 832 | 652 | 180 | **21.63%** | 78.37% | $67.24 | $1,655,845.80 | $14,592.10 | 🟡 Moderate (Sticky) |
-| **37–48 Months (Yr 4)** | 762 | 617 | 145 | **19.03%** | 80.97% | $69.18 | $2,154,534.55 | $12,056.40 | 🟢 Stable (Loyal) |
-| **49–60 Months (Yr 5)** | 832 | 712 | 120 | **14.42%** | 85.58% | $73.12 | $3,201,646.30 | $9,374.85 | 🟢 Low (Champion) |
-| **61–72 Months (Yr 6)** | 1,407 | 1,314 | 93 | **6.61%** | **93.39%** | $79.52 | $7,289,202.45 | $4,994.25 | 💎 Minimal (VIP Anchor) |
+| **0–12 Months (Yr 1)** | 2,186 | 1,149 | 1,037 | **47.44%** | 52.56% | **$56.10** | $601,651.90 | **$68,954.25** | 🚨 Critical (Cliff) |
+| **13–24 Months (Yr 2)** | 1,024 | 730 | 294 | **28.71%** | 71.29% | **$61.36** | $1,153,287.70 | **$23,081.65** | ⚠️ High (Contract Expiry) |
+| **25–36 Months (Yr 3)** | 832 | 652 | 180 | **21.63%** | 78.37% | **$65.58** | $1,655,845.80 | **$15,167.95** | 🟡 Moderate (Sticky) |
+| **37–48 Months (Yr 4)** | 762 | 617 | 145 | **19.03%** | 80.97% | **$66.32** | $2,154,534.55 | **$12,294.55** | 🟢 Stable (Loyal) |
+| **49–60 Months (Yr 5)** | 832 | 712 | 120 | **14.42%** | 85.58% | **$70.55** | $3,201,646.30 | **$10,581.90** | 🟢 Low (Champion) |
+| **61–72 Months (Yr 6)** | 1,407 | 1,314 | 93 | **6.61%** | **93.39%** | **$75.95** | $7,289,202.45 | **$9,050.55** | 💎 Minimal (VIP Anchor) |
 | **Portfolio Total** | **7,043** | **5,174** | **1,869** | **26.54%** | **73.46%** | **$64.76** | **$16,056,168.70** | **$139,130.85** | **Portfolio Baseline** |
 
 ### Analytical Findings

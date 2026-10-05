@@ -24,12 +24,12 @@
 # 🚀 Task 2: Customer Retention & Churn Analysis
 
 > **Executive Business Objective:**  
-> In subscription and recurring revenue models, acquiring a replacement customer costs **5x to 7x more** than retaining an existing one. This task analyzes **7,043 subscriber accounts** ($456.1K baseline MRR) to understand why customers churn, identify high-risk segments, model customer cohort survival over 72 months, and formulate high-ROI retention interventions.
+> In subscription and recurring revenue models, acquiring a replacement customer costs **5x to 7x more** than retaining an existing one. This task analyzes **7,043 subscriber accounts** ($456.1K baseline MRR) to understand why customers churn, identify high-risk segments, model tenure-based retention decay over 72 months, and formulate high-ROI retention interventions.
 
 ### 📑 Task 2 Core Deliverables
-- **[Customer_Retention_Dashboard.xlsx](Customer_Retention_Dashboard.xlsx)**: 4-tab client-ready Excel dashboard featuring symmetrical KPI cards, native Excel charts, cohort retention tables, customer churn risk scoring, and 7,043 cleaned records with autofilters.
-- **[retention_analysis_report.md](retention_analysis_report.md)**: In-depth executive advisory report detailing cohort decay, root-cause drivers, LTV economics, and a 30-60-90 day retention roadmap.
-- **[customer_retention_and_churn_analysis.ipynb](customer_retention_and_churn_analysis.ipynb)**: Reproducible Python notebook covering data cleaning, EDA, cohort survival curves, risk modeling, and financial simulations.
+- **[Customer_Retention_Dashboard.xlsx](Customer_Retention_Dashboard.xlsx)**: 4-tab client-ready Excel dashboard featuring symmetrical KPI cards, native Excel charts, tenure bracket retention tables, customer churn risk scoring, and 7,043 cleaned records with autofilters.
+- **[retention_analysis_report.md](retention_analysis_report.md)**: In-depth executive advisory report detailing tenure-based attrition decay, root-cause drivers, LTV economics, and a 30-60-90 day retention roadmap.
+- **[customer_retention_and_churn_analysis.ipynb](customer_retention_and_churn_analysis.ipynb)**: Reproducible Python notebook covering data cleaning, EDA, cross-sectional tenure bracket curves, risk modeling, and financial simulations.
 - **[TASK2_README.md](TASK2_README.md)**: Dedicated stand-alone documentation for Task 2.
 - **[task2_linkedin_post.txt](task2_linkedin_post.txt)**: Pre-formatted professional LinkedIn showcase post.
 - **[visualizations/retention/](visualizations/retention/)**: 7 high-resolution (300 DPI) publication-ready charts.
@@ -52,7 +52,7 @@
 - **Key Finding:** Churned accounts account for **30.5% of total portfolio revenue** ($139.1K/mo), indicating that churn disproportionately affects higher-priced tiers ($74.44/mo churned vs. $61.26/mo retained).
 
 #### 2. The Onboarding Cliff (Tenure Bracket Retention & Churn Decay)
-![Cohort Tenure Retention Survival](visualizations/retention/02_cohort_tenure_survival.png)
+![Tenure Bracket Retention & Churn Decay](visualizations/retention/02_tenure_bracket_retention.png)
 - **Key Finding:** **55.5% of all churn occurs in months 0–12** (47.4% first-year churn). Accounts active past Month 24 experience attrition rates dropping to 21.6% and down to 6.6% for Month 61–72. Proactive onboarding in Days 1–90 is the highest leverage retention initiative.
 
 #### 3. Contract Commitment as the Strongest Retention Anchor
@@ -146,7 +146,7 @@ FUTURE_DS_01/
     ├── 08_executive_dashboard_summary.png   # [Task 1]
     └── retention/                           # [Task 2] Customer Retention Visualizations
         ├── 01_churn_overview_and_revenue.png
-        ├── 02_cohort_tenure_survival.png
+        ├── 02_tenure_bracket_retention.png
         ├── 03_contract_risk_breakdown.png
         ├── 04_fiber_optic_service_paradox.png
         ├── 05_payment_method_friction.png

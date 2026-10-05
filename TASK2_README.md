@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 
 > **Internship Task 2 Deliverable for Future Interns (Data Science & Analytics 2026)**  
-> An end-to-end customer retention and subscription churn analysis across **7,043 subscriber accounts** ($456.1K baseline MRR) diagnosing churn drivers, customer cohort survival patterns, and delivering an executive retention playbook to preserve recurring revenue.
+> An end-to-end customer retention and subscription churn analysis across **7,043 subscriber accounts** ($456.1K baseline MRR) diagnosing churn drivers, cross-sectional tenure retention patterns, and delivering an executive retention playbook to preserve recurring revenue.
 
 ---
 
@@ -15,9 +15,9 @@
 
 | Deliverable | File / Path | Key Details |
 |---|---|---|
-| **Executive Excel Dashboard** | **[`Customer_Retention_Dashboard.xlsx`](Customer_Retention_Dashboard.xlsx)** | Formatted 4-tab workbook featuring symmetrical KPI cards, native Excel charts, cohort retention matrix, customer churn risk scoring, and 7,043 cleaned records with autofilters. |
-| **Business Analysis & Advisory Report** | **[`retention_analysis_report.md`](retention_analysis_report.md)** | Strategic advisory report for founders and product teams detailing cohort decay, root-cause drivers, LTV economics, and a 30-60-90 day retention roadmap. |
-| **Jupyter Analytics Notebook** | **[`customer_retention_and_churn_analysis.ipynb`](customer_retention_and_churn_analysis.ipynb)** | End-to-end reproducible Python notebook covering data cleaning, EDA, cohort survival curves, risk modeling, and financial simulations. |
+| **Executive Excel Dashboard** | **[`Customer_Retention_Dashboard.xlsx`](Customer_Retention_Dashboard.xlsx)** | Formatted 4-tab workbook featuring symmetrical KPI cards, native Excel charts, tenure bracket retention matrix, customer churn risk scoring, and 7,043 cleaned records with autofilters. |
+| **Business Analysis & Advisory Report** | **[`retention_analysis_report.md`](retention_analysis_report.md)** | Strategic advisory report for founders and product teams detailing tenure-based attrition decay, root-cause drivers, LTV economics, and a 30-60-90 day retention roadmap. |
+| **Jupyter Analytics Notebook** | **[`customer_retention_and_churn_analysis.ipynb`](customer_retention_and_churn_analysis.ipynb)** | End-to-end reproducible Python notebook covering data cleaning, EDA, cross-sectional tenure bracket curves, risk modeling, and financial simulations. |
 | **Cleaned Customer Dataset** | **[`data/telco_customer_churn_cleaned.csv`](data/telco_customer_churn_cleaned.csv)** | Preprocessed dataset with whitespace handling, binary churn flags, tenure cohorts, and predictive churn risk tiers. |
 | **High-Resolution Visualizations** | **[`visualizations/retention/`](visualizations/retention/)** | 7 publication-grade 300 DPI visualizations covering churn overview, cohort decay, contract risk, support paradox, payment friction, and CLV progression. |
 | **LinkedIn Showcase Post** | **[`task2_linkedin_post.txt`](task2_linkedin_post.txt)** | Ready-to-publish professional LinkedIn post summarizing problem scope, insights, and technical tools. |
@@ -51,7 +51,7 @@
 ---
 
 ### 2. The Onboarding Cliff (Tenure Bracket Retention & Churn Decay)
-![Cohort Tenure Retention Survival](visualizations/retention/02_cohort_tenure_survival.png)
+![Tenure Bracket Retention & Churn Decay](visualizations/retention/02_tenure_bracket_retention.png)
 - **The Month 0–12 Cliff:** **55.5% of all churn (1,037 accounts)** occurs in the first 12 months.
 - **Attrition Stabilization:** For accounts active past Month 24, snapshot churn drops to **21.6%**, and drops further to **6.6%** for Month 61–72 accounts. Proactive onboarding in Days 1–90 is the highest leverage retention initiative.
 
@@ -123,7 +123,7 @@ flowchart LR
 - **Microsoft Excel:** Executive dashboard design, KPI formatting, native Excel Bar & Column charts, cohort tables, and risk segmentation.
 - **Python 3.12:** Data hygiene, type conversion, pandas grouping, numpy aggregation, and statistical testing.
 - **Matplotlib & Seaborn:** Publication-quality 300 DPI visualization exports with unified design aesthetics.
-- **Business Strategy:** SaaS retention economics, cohort survival decay, CLV modeling, and sensitivity analysis.
+- **Business Strategy:** SaaS retention economics, tenure bracket retention decay, CLV modeling, and sensitivity analysis.
 
 ---
 *Developed as part of the Future Interns Data Science & Analytics Program.*
