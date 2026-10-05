@@ -19,7 +19,7 @@ This comprehensive analytics engagement evaluated **7,043 subscriber accounts** 
 +--------------------------+--------------------------+--------------------------+------------------------+
 |   TOTAL SUBSCRIBER BASE  |    OVERALL CHURN RATE    |    MONTHLY MRR AT RISK   |   ANNUALIZED LOSS RUN  |
 |          7,043           |          26.54%          |       $139,130.85        |     $1,669,570.20      |
-|  (5,174 Retained Accounts)  |  (Benchmark: < 5-8% SaaS)| (30.5% of Portfolio MRR) |   (High Reinvestment)  |
+|  (5,174 Retained Accounts)  | (Snapshot Reference Target) | (30.5% of Portfolio MRR) |   (High Reinvestment)  |
 +--------------------------+--------------------------+--------------------------+------------------------+
 |   YEAR-1 RETENTION RATE  |  OBSERVED MEAN TENURE    |   YEAR-1 AVG CHARGES ($) |  MATURE COHORT AVG ($) |
 |          52.56%          |        32.4 Months       |          $275.23         |       $5,180.67        |
@@ -30,8 +30,10 @@ This comprehensive analytics engagement evaluated **7,043 subscriber accounts** 
 > [!NOTE]
 > **Methodological Context & Data Limitations**  
 > This dataset is a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time, with tenure ranging from 0 to 72 months.  
+> - **Snapshot Churn vs. Annual Benchmark:** The 26.54% churn rate is the proportion of churned accounts within the cross-sectional dataset across heterogeneous observation periods. Because the dataset does not establish a uniform 12-month observation window, subscription benchmark comparisons (e.g. < 5–8% annual SaaS churn) serve as illustrative reference targets rather than an annualized measurement comparison.  
 > - **Cross-Sectional vs. Longitudinal:** The 12-month tenure groupings represent *cross-sectional lifecycle brackets* (comparing accounts of differing ages in the current snapshot) rather than a longitudinal cohort panel following a single signup cohort across consecutive calendar months.  
-> - **Right-Censored Active Accounts:** For currently retained subscribers, tenure is right-censored because their subscriptions are ongoing. The 32.4-month average represents the *mean observed tenure* of accounts in this snapshot, not completed actuarial customer lifetimes.
+> - **Right-Censored Active Accounts:** For currently retained subscribers, tenure is right-censored because their subscriptions are ongoing. The 32.4-month average represents the *mean observed tenure* of accounts in this snapshot, not completed actuarial customer lifetimes.  
+> - **Tenure Bracket Spend Composition:** Cumulative spend comparisons across tenure brackets ($275.23 in Months 0–12 vs. $5,180.67 in Months 61–72) reflect mean TotalCharges accumulated by *all accounts (both retained and churned)* observed within each bracket, illustrating tenure-driven billing accumulation rather than tracking only active survivors.
 
 ### 🎯 Key Strategic Takeaways
 1. **The $120.8K/Month Contract Gap:** Month-to-month contracts suffer from an alarming **42.71% churn rate** and account for **86.86% of all lost recurring revenue** ($120.8K/mo). Annual and two-year commitments reduce churn by up to **15x** (11.27% and 2.83% respectively).

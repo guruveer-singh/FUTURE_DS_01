@@ -29,15 +29,18 @@
 | Metric | Portfolio Value | Strategic Business Context |
 |---|---|---|
 | **Total Customer Base** | **7,043 Accounts** | 5,174 Retained (73.5%) vs. 1,869 Churned (26.5%) |
-| **Overall Churn Rate** | **26.54%** | SaaS industry benchmark target: < 5-8% annual churn |
+| **Overall Churn Rate** | **26.54%** | Observed snapshot churn across all records (subscription reference target: < 5–8%; dataset does not establish a 12-month annual period) |
 | **Monthly Revenue Lost (MRR)** | **$139,130.85 / mo** | 30.5% of total portfolio recurring revenue ($456.1K baseline MRR) |
 | **Annualized Run-Rate Loss** | **$1,669,570.20 / yr** | High revenue leakage eroding customer acquisition ROI |
 | **Year-1 Retention Rate** | **52.56%** | **47.4% churn in months 0–12** (The Onboarding Cliff) |
 | **Observed Mean Tenure** | **32.4 Months** | Snapshot subscriber base (right-censored) |
-| **Cumulative Spend (TotalCharges)** | **$275 (Yr 1) -> $5,180 (Yr 6)** | Mature retained accounts generate **18.8x higher cumulative spend** |
+| **Cumulative Spend (TotalCharges)** | **$275.23 (Yr 1) -> $5,180.67 (Yr 6)** | Accounts in mature 61–72 Mo bracket accumulate **18.8x higher total charges** than 0–12 Mo bracket (across all accounts in bracket) |
 
 > **📌 Methodological Note: Cross-Sectional Snapshot vs. Longitudinal Cohort Tracking**  
-> This dataset represents a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time, with tenure ranging from 0 to 72 months. Grouping accounts into 12-month tenure lifecycle brackets (`0-12 Mo`, `13-24 Mo`, etc.) provides a cross-sectional proxy for tenure-related attrition propensity. Active subscriber tenures are right-censored, so the observed average tenure (32.4 months) reflects the mean age of accounts in this snapshot rather than completed actuarial customer lifetimes.
+> This dataset represents a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time, with tenure ranging from 0 to 72 months. Grouping accounts into 12-month tenure lifecycle brackets (`0-12 Mo`, `13-24 Mo`, etc.) provides a cross-sectional proxy for tenure-related attrition propensity.  
+> - **Snapshot Churn vs. Annual Benchmark:** The 26.54% churn rate is the proportion of churned accounts within the cross-sectional dataset across heterogeneous observation periods. Because the dataset does not establish a uniform 12-month observation window, subscription benchmark comparisons (e.g. < 5–8% annual SaaS churn) serve as illustrative reference targets rather than an annualized measurement comparison.  
+> - **Right-Censored Active Accounts:** For currently retained subscribers, tenure is right-censored because their subscriptions are ongoing. The 32.4-month average represents the *mean observed tenure* of accounts in this snapshot rather than completed actuarial customer lifetimes.  
+> - **Tenure Bracket Spend Composition:** Cumulative spend comparisons across tenure brackets ($275.23 in Months 0–12 vs. $5,180.67 in Months 61–72) reflect mean TotalCharges accumulated by *all accounts (both retained and churned)* observed within each bracket, illustrating tenure-driven billing accumulation rather than tracking only active survivors.
 
 ---
 

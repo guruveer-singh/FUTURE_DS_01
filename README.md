@@ -99,14 +99,14 @@
 
 ### 🎯 Task 2 Executive KPI Scorecard
 - **Total Subscriber Base:** 7,043 accounts (5,174 Retained | 1,869 Churned)
-- **Portfolio Churn Rate:** **26.54%** (SaaS target benchmark: < 5–8%)
+- **Portfolio Churn Rate:** **26.54%** (Snapshot rate across all records; subscription reference target: < 5–8%; dataset does not establish a 12-month annual period)
 - **Monthly Revenue Lost (MRR):** **$139,130.85 / mo** (30.5% of total portfolio MRR)
 - **Annualized Run-Rate Loss:** **$1,669,570.20 / year**
 - **Year-1 Retention Rate:** **52.56%** (**47.4% churn in months 0–12** - The Onboarding Cliff)
 - **Observed Mean Account Tenure:** **32.4 Months** (Snapshot base; right-censored active accounts)
-- **Mature Cumulative Spend (TotalCharges):** **$5,180.67** (18.8x higher than Year-1 charges of $275)
+- **Mature Cumulative Spend (TotalCharges):** **$5,180.67** (18.8x higher than Year-1 average charges of $275.23 across all accounts in bracket)
 
-> **📌 Methodological Note:** This analysis evaluates a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time. Grouping accounts into 12-month tenure lifecycle brackets provides a cross-sectional proxy for attrition propensity. Active accounts are right-censored; 32.4 months represents observed mean tenure rather than completed actuarial customer lifetimes.
+> **📌 Methodological Note:** This analysis evaluates a **cross-sectional snapshot** of 7,043 customer accounts observed at a single point in time. Grouping accounts into 12-month tenure lifecycle brackets provides a cross-sectional proxy for attrition propensity. Active accounts are right-censored; 32.4 months represents observed mean tenure rather than completed actuarial customer lifetimes. The 26.54% snapshot churn rate reflects attrition within this sample rather than an annualized measurement window, and cumulative spend comparisons reflect mean TotalCharges accumulated by all accounts (both active and churned) in each bracket.
 
 ### 📈 Task 2 Visual Analytics & Strategic Findings
 

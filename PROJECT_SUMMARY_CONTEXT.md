@@ -62,7 +62,8 @@
 - **The First-Year Cliff:** 55.48% of all churn (1,037 accounts) occurs in the first 12 months (47.44% Yr-1 churn rate). Retention stabilizes after Month 24.
 - **The Fiber Optic Support Paradox:** Premium Fiber Optic users ($91.50/mo) churn at 41.89%, but bundling Tech Support slashes churn to 22.63% (a 54% reduction).
 - **Payment Friction:** Electronic Check churns at 45.29% vs 15.24% for Auto-Credit Card.
-- **Compounding Cumulative Spend:** Observed cumulative charges (TotalCharges) expand by 18.8x from Year 1 ($275.23) to Year 6 ($5,180.67).
+- **Compounding Cumulative Spend:** Observed cumulative charges (TotalCharges) expand by 18.8x from Year 1 ($275.23) to Year 6 ($5,180.67) across all accounts in each bracket.
+- **Snapshot Measurement Note:** 26.54% is a cross-sectional snapshot churn rate rather than an annualized period. Bracket comparisons reflect all accounts observed in each tenure tier.
 
 ---
 

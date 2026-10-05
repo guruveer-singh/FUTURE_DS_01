@@ -93,7 +93,7 @@ def create_kpi_card(ws, start_col, start_row, end_col, end_row, title, value, su
             ws.cell(row=r, column=c).border = thin_border
 
 create_kpi_card(ws_dash, 1, 5, 3, 7, "TOTAL CUSTOMER BASE", "7,043", "5,174 Retained | 1,869 Churned", '0F172A')
-create_kpi_card(ws_dash, 4, 5, 6, 7, "OVERALL CHURN RATE", "26.54%", "Benchmark: SaaS target < 5-8%", 'E11D48')
+create_kpi_card(ws_dash, 4, 5, 6, 7, "OVERALL CHURN RATE", "26.54%", "Snapshot Rate | Reference <8%", 'E11D48')
 create_kpi_card(ws_dash, 7, 5, 9, 7, "MONTHLY MRR LOSS", "$139,131", "Annualized Run-Rate: $1.67M / yr", 'E11D48')
 create_kpi_card(ws_dash, 10, 5, 11, 7, "YEAR-1 RETENTION RATE", "52.56%", "47.4% churn in first 12 months", 'D97706')
 create_kpi_card(ws_dash, 12, 5, 14, 7, "MEAN OBSERVED TENURE", "32.4 Mos", "Snapshot active base (right-censored)", '0D9488')
